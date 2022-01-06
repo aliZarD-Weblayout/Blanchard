@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanchard - художественная галерея</title>
+    <link rel="shortcut icon" href="img/Blanchard-favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+    <header class="header" id="header">
+        <div class="header__top">
+            <div class="header__container container flex">
+                <div class="header__left">
+                    <div id="burger-menu" class="header__burger-menu">
+                        <nav class="header__burger-nav">
+                            <ul class="header__burger-list flex">
+                                <li class="header__burger-list-item">
+                                    <a href="#about-us" class="header__center-link">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#gallery" class="header__center-link">
+                                        Галерея
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#catalog" class="header__center-link">
+                                        Каталог
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#events" class="header__center-link">
+                                        События
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#publications" class="header__center-link">
+                                        Издания
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#projects" class="header__center-link">
+                                        Проекты
+                                    </a>
+                                </li>
+                                <li class="header__burger-list-item">
+                                    <a href="#contacts" class="header__center-link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="header__burger_in-btn">
+                            <svg class="header__right_svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
+                            </svg>  
+                            Войти       
+                        </a>
+                    </div>
+                    <button id="burger" class="header__burger-btn">
+                        <span class="header__burger-span"></span>
+                    </button>
+                    <a href="#" class="header__left-logo-link">
+                        <img src="img/Blanchard-logo.png" alt="Logotip">
+                    </a>
+                </div>
+
+                <div class="header__center">
+                    <a href="#" class="header__center-logo-link">
+                        <img src="img/Blanchard-logo.png" alt="Logotip">
+                    </a>
+                    <nav class="header__nav">
+                        <ul class="header__list flex">
+                            <li class="header__list-item">
+                                <a href="#about-us" class="header__center-link">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#gallery" class="header__center-link">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#catalog" class="header__center-link">
+                                    Каталог
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#events" class="header__center-link">
+                                    События
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#publications" class="header__center-link">
+                                    Издания
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#projects" class="header__center-link">
+                                    Проекты
+                                </a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="#contacts" class="header__center-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header__right">
+                    <a href="#" class="header__right-link">
+                        <svg class="header__right_svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
+                        </svg>  
+                        Войти                      
+                    </a>
+                    <button class="header__search-btn">
+                        <svg class="search_btn-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                        </svg>                        
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+        <div class="header__bottom-block container flex">
+            <ul class="header__bottom-list flex">
+                <li class="header__bottom-list-item">
+                    <button class="header__bottom-btn header__bottom-span">
+                            Реализм
+                    </button>
+                    <div class="header__bottom--dropdown">
+                        <ul class="header__bottom--dropdown-list">
+                            <li tabindex="0" class="header__bottom--dropdown-item tintorreto">
+                                <span class="header__bottom--dropdown-name">
+                                    Тинторрето
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item fridrih">
+                                <span class="header__bottom--dropdown-name">
+                                    Фридрих
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item leonardo">
+                                <span class="header__bottom--dropdown-name">
+                                    Леонардо
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item verrokio">
+                                <span class="header__bottom--dropdown-name">
+                                    Верроккье
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item tintorreto">
+                                <span class="header__bottom--dropdown-name">
+                                    Тинторрето
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item fridrih">
+                                <span class="header__bottom--dropdown-name">
+                                    Фридрих
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header__bottom-list-item">
+                    <button class="header__bottom-btn header__bottom-span">
+                            Импрессионизм
+                    </button>
+                    <div class="header__bottom--dropdown">
+                        <ul class="header__bottom--dropdown-list">
+                            <li tabindex="0" class="header__bottom--dropdown-item mone">
+                                <span class="header__bottom--dropdown-name">
+                                    Моне
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item sisley">
+                                <span class="header__bottom--dropdown-name">
+                                    Сислей
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item mane">
+                                <span class="header__bottom--dropdown-name">
+                                    Мане
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item renuar">
+                                <span class="header__bottom--dropdown-name">
+                                    Ренуар
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item mone">
+                                <span class="header__bottom--dropdown-name">
+                                    Моне
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item sisley">
+                                <span class="header__bottom--dropdown-name">
+                                    Сислей
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header__bottom-list-item">
+                    <button class="header__bottom-btn header__bottom-span">
+                            Постимпрессионизм
+                    </button>
+                    <div class="header__bottom--dropdown">
+                        <ul class="header__bottom--dropdown-list">
+                            <li tabindex="0" class="header__bottom--dropdown-item van-gog">
+                                <span class="header__bottom--dropdown-name">
+                                    Ван Гог
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item sezann">
+                                <span class="header__bottom--dropdown-name">
+                                    Сезанн
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item gogen">
+                                <span class="header__bottom--dropdown-name">
+                                    Гоген
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item sera">
+                                <span class="header__bottom--dropdown-name">
+                                    Сера
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item van-gog">
+                                <span class="header__bottom--dropdown-name">
+                                    Ван Гог
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item sezann">
+                                <span class="header__bottom--dropdown-name">
+                                    Сезанн
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header__bottom-list-item">
+                    <button class="header__bottom-btn header__bottom-span">
+                            Авангард
+                    </button>
+                    <div class="header__bottom--dropdown">
+                        <ul class="header__bottom--dropdown-list">
+                            <li tabindex="0" class="header__bottom--dropdown-item kandinskiy">
+                                <span class="header__bottom--dropdown-name">
+                                    Кандинский
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item marinetti">
+                                <span class="header__bottom--dropdown-name">
+                                    Маринетти
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item malevich">
+                                <span class="header__bottom--dropdown-name">
+                                    Малевич
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item pikasso">
+                                <span class="header__bottom--dropdown-name">
+                                    Пикассо
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item kandinskiy">
+                                <span class="header__bottom--dropdown-name">
+                                    Кандинский
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item marinetti">
+                                <span class="header__bottom--dropdown-name">
+                                    Маринетти
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header__bottom-list-item">
+                    <button class="header__bottom-btn header__bottom-span">
+                            Футуризм
+                    </button>
+                    <div class="header__bottom--dropdown">
+                        <ul data-simplebar="init" class="header__bottom--dropdown-list">
+                            <li tabindex="0" class="header__bottom--dropdown-item kappa">
+                                <span class="header__bottom--dropdown-name">
+                                    Карра
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item pratella">
+                                <span class="header__bottom--dropdown-name">
+                                    Прателла
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item severini">
+                                <span class="header__bottom--dropdown-name">
+                                    Северини
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item balla">
+                                <span class="header__bottom--dropdown-name">
+                                    Балла
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item kappa">
+                                <span class="header__bottom--dropdown-name">
+                                    Карра
+                                </span>
+                            </li>
+                            <li tabindex="0" class="header__bottom--dropdown-item pratella">
+                                <span class="header__bottom--dropdown-name">
+                                    Прателла
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <form class="header__bottom-form" action="https://jsonplaceholder.typicode.com/posts">
+                <button tabindex="-1" class="search__btn">
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                    </svg>                                    
+                </button>
+                <input placeholder="Поиск по сайту" class="header__search__input" type="text">
+            </form>
+      </div>
+      </div>
+    </header>
+    <main id="main" class="main">
+        <section class="hero" id="hero">
+            <div class="hero__container">
+                <div id="hero__swiper" class="swiper hero__new-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="hero__swiper-slide hero__swiper-slide-1"></div>
+                      <div class="hero__swiper-slide hero__swiper-slide-2"></div>
+                      <div class="hero__swiper-slide hero__swiper-slide-3"></div>
+                    </div>
+    
+                    </div>
+
+                    <div class="hero__content container">
+                        <h1 class="hero__h1">
+                            Прикоснитесь к&nbsp;прекрасному
+                        </h1>
+                        <div class="hero__descr">
+                            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+                        </div>
+                        <a href="#newsletter" class="hero__btn">
+                            Подписаться на рассылку
+                        </a>
+                    </div>
+            </div>
+        </section>
+        <section id="about-us" class="about-us">
+            <div class="about-us__container container">
+                <h2 class="section__h2 about-us__h2">
+                    О нас
+                </h2>
+
+                <p class="about-us__descr">
+                    Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что&nbsp;высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+                </p>
+            </div>
+        </section>
+        <section id="gallery" class="gallery">
+            <div class="gallery__container container">
+                <div class="gallery__left">
+                    <div class="h2_select">
+                        <h2 class="gallery__h2 section__h2">
+                            Галерея
+                        </h2>
+                        <div class="gallery__select-container">
+                            <span class="gallery__select-name">Фильтр:</span>
+                            <select name="gallery-choices" class="gallery__choices" id="gallery-choices">
+                                <option class="choices_option" value="">Живопись</option>
+                                <option class="choices_option">Рисунок</option>
+                                <option class="choices_option">Скульптура</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkbox__container">
+                        <ul class="checkbox__list">
+                            <li class="checkbox__item">
+                                <label class="checbox_label">
+                                    <input class="checkbox_input" type="checkbox">
+                                    <span class="checkbox_span"></span>
+                                    <span class="checkbox_text">
+                                        XIX век
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkbox__item">
+                                <label class="checbox_label">
+                                    <input class="checkbox_input" type="checkbox">
+                                    <span class="checkbox_span"></span>
+                                    <span class="checkbox_text">
+                                        XX век
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="checkbox__item">
+                                <label class="checbox_label">
+                                    <input class="checkbox_input" type="checkbox">
+                                    <span class="checkbox_span"></span>
+                                    <span class="checkbox_text">
+                                        Современность
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper gallery__swiper-right">
+                    <div class="gallery__swiper-modal">
+                        <div class="gallery__modal-content">
+                          <div class="gallery__modal-content-left">
+                            <img class="gallery__modal-img" src="https://searchtips.ru/wp-content/uploads/8/e/d/8ede857c010f1b4d0f203f8d226e339d.jpg" />
+                          </div>
+                          <div class="gallery__modal-content-right">
+                            <button class="modal-close">close</button>
+                            <h2>Заголовок</h2>
+                            <p>Text</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="swiper swiper-right--content">
+                        <div class="gallery__swiper-right-btns">
+                          <button class="sw-btn swiper-btn--prev"></button>
+                          <div class="swiper-pagination--right"></div>
+                          <button class="sw-btn swiper-btn--next"></button>
+                        </div>
+                        <div class="gallery__swiper-wrapper">
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-1.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-1.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-1.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-1.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-2.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-2.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-2.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-2.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-3.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-3.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-3.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-3.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-4.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-4.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-4.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-4.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-5.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-5.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-5.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-5.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                            <div tabindex="0" class="gallery__swiper-slide">
+                                <picture>
+                                    <source src="img/gallery-slide-6.png" media="(max-width: 1920px)">
+                                    <source src="img/gallery-slide-6.png" media="(max-width: 1024px)">
+                                    <source src="img/gallery-slide-6.png" media="(max-width: 576px)">
+                                    <img class="gallery__slide-img" src="img/gallery-slide-6.png" alt="gallery-slide">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="catalog" class="catalog">
+            <div class="catalog__container container">
+                <div class="catalog__not-remove flex">
+                    <h2 class="section__h2 catalog__h2">
+                        Каталог
+                    </h2>
+                    <ul class="catalog__country-list flex">
+                        <li class="catalog__country-item">
+                            <button data-path="France" class="catalog__country-btn btn-france">
+
+                            </button>
+                        </li>
+                        <li class="catalog__country-item">
+                            <button data-path="German" class="catalog__country-btn btn-german">
+
+                            </button>
+                        </li>
+                        <li class="catalog__country-item">
+                            <button data-path="Italy" class="catalog__country-btn btn-italy">
+
+                            </button>
+                        </li>
+                        <li class="catalog__country-item">
+                            <button data-path="Russia" class="catalog__country-btn btn-russia">
+
+                            </button>
+                        </li>
+                        <li class="catalog__country-item">
+                            <button data-path="Belgium" class="catalog__country-btn btn-belgium">
+
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div data-target="France" class="tab__content">
+                    <p class="margin_descr tabs__descr">
+                        Франция подарила миру много ярких оригинальных художников. И это не только импрессионисты, которые поколебали многовековые традиции. Страна соседствует с колыбелью живописи — прекрасной Италией. Поэтому неудивительно, что Ренессанс оказал большое влияние на творческих людей. Но национальная оригинальная школа не сформировалась; Франция не может похвастаться мастерами, превосходящими по таланту знаменитых Леонардо да Винчи или Караваджо. Уроженцы этой солнечной страны внесли свой вклад в мировое искусство в другое время.
+                    </p>
+                    <p class="empty-descr tabs__descr">
+                        Пока мы не добавили сюда художников...Но в галерее есть на что посмотреть!
+                    </p>
+                    <a href="#gallery" class="to_gallery">
+                        В галерею
+                    </a>
+                </div>
+                <div data-target="German" class="tab__content">
+                    <p class="margin_descr tabs__descr">
+                        Сегодня просто невозможно представить мировую культуру без картин Альбрехта Дюрера и Ганса Гольбейна Младшего, музыки Баха и Бетховена, поэзии Шиллера и Гете, без сказок Э.Т. Гофмана и драматургии Брехта, и многих других великих и талантливых немцев, произведения которых стали достоянием культуры всего человечества.
+                    </p>
+                    <p class="empty-descr tabs__descr">
+                        Пока мы не добавили сюда художников...Но в галерее есть на что посмотреть!
+                    </p>
+                    <a href="#gallery" class="to_gallery">
+                        В галерею
+                    </a>
+                </div>
+                <div data-target="Italy" class="tab__content">
+                    <p class="margin_descr tabs__descr">
+                        Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+                    </p>
+                    <div class="italy__content">
+                        <div class="italy__content-right">
+                            <ul id="accordion" class="italy__accordion-list">
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1400 по 1499 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                            </svg>                                            
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+                                        <ul class="accordion__people-list">
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Бенедетто ди Биндо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Бергоньоне, Амброджо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Биссоло, Франческо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Больтраффио, Джованни
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Бонсиньори, Франческо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Боттичини, Рафаэлло
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Брамантино
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Бреа, Людовико
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Бьяджо д’Антонио Туччи
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Веккьетта
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Андреа Верроккьо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Доменико Гирландайо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Беноццо Гоццоли
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Граначчи, Франческо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Грегорио ди Чекко
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Джованни да Удине
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Джованни ди Паоло
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Джорджоне
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Парентино, Бернардо
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Пезеллино
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Пьетро Перуджино
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Перуцци, Бальдассаре
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Пизанелло
+                                                </a>
+                                            </li>
+                                            <li class="accordion__people">
+                                                <a href="#" class="accordion__painter-name">
+                                                    Пинтуриккьо
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1500 по 1599 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1600 по 1699 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1700 по 1799 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1800 по 1899 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 1900 по 1999 гг.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                                <li class="italy__accordion-item">
+                                    <div class="italy__accordion-top">
+                                        <h3 class="accordion-title">
+                                            C 2000 г.
+                                        </h3>
+                                        <svg class="accordion-top-svg" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                            <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                        </svg>
+
+                                    </div>
+                                    <div class="italy__accordion-bottom">
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="Russia" class="tab__content">
+                    <p class="margin_descr tabs__descr">
+                        История русского искусства отражает бурную историю страны и ее географическое положение между Востоком и Западом. Постоянно возникают дискуссии по поводу его сущности: является ли оно своеобразным воплощением западноевропейских традиций или представляет собой совершенно оригинальный феномен. Несмотря на частые политические изменения и периодически возникающие сомнения в национальной самобытности, русское художественное творчество имеет ряд отличительных черт, таких, как яркий колорит, асимметрия форм и склонность то к реализму, то к абстракции.
+                    </p>
+                    <p class="empty-descr tabs__descr">
+                        Пока мы не добавили сюда художников...Но в галерее есть на что посмотреть!
+                    </p>
+                    <a href="#gallery" class="to_gallery">
+                        В галерею
+                    </a>
+                </div>
+                <div data-target="Belgium" class="tab__content">
+                    <p class="margin_descr tabs__descr">
+                        Небольшая страна, давшая миру в прошлом ряд величайших художников. Бельгия к началу 19 в. переживала длительный застой искусства. Известную роль в этом играло политически и экономически подчиненное положение Бельгии, вплоть до 1830 г. не обладавшей национальной независимостью. Лишь когда с начала нового столетия все сильнее развертывается национально-освободительное движение, оживает и искусство, занявшее вскоре же очень важное место в культурной жизни страны. Показательно хотя бы то, что по сравнению с другими европейскими странами количество художников в маленькой Бельгии относительно к численности населения было очень велико.
+                    </p>
+                    <p class="empty-descr tabs__descr">
+                        Пока мы не добавили сюда художников...Но в галерее есть на что посмотреть!
+                    </p>
+                    <a href="#gallery" class="to_gallery">
+                        В галерею
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script src="js/choices.min.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
