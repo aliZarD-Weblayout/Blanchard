@@ -139,7 +139,7 @@
                     <button class="header__bottom-btn header__bottom-span">
                             Реализм
                     </button>
-                    <div class="header__bottom--dropdown">
+                    <div class="header__bottom--dropdown" data-simplebar>
                         <ul class="header__bottom--dropdown-list">
                             <li tabindex="0" class="header__bottom--dropdown-item tintorreto">
                                 <span class="header__bottom--dropdown-name">
@@ -179,6 +179,7 @@
                             Импрессионизм
                     </button>
                     <div class="header__bottom--dropdown">
+                        <div class="header__bottom--dropdown__simplebar-wrapper" data-simplebar>
                         <ul class="header__bottom--dropdown-list">
                             <li tabindex="0" class="header__bottom--dropdown-item mone">
                                 <span class="header__bottom--dropdown-name">
@@ -211,13 +212,14 @@
                                 </span>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </li>
                 <li class="header__bottom-list-item">
                     <button class="header__bottom-btn header__bottom-span">
                             Постимпрессионизм
                     </button>
-                    <div class="header__bottom--dropdown">
+                    <div class="header__bottom--dropdown" data-simplebar>
                         <ul class="header__bottom--dropdown-list">
                             <li tabindex="0" class="header__bottom--dropdown-item van-gog">
                                 <span class="header__bottom--dropdown-name">
@@ -256,7 +258,7 @@
                     <button class="header__bottom-btn header__bottom-span">
                             Авангард
                     </button>
-                    <div class="header__bottom--dropdown">
+                    <div class="header__bottom--dropdown" data-simplebar>
                         <ul class="header__bottom--dropdown-list">
                             <li tabindex="0" class="header__bottom--dropdown-item kandinskiy">
                                 <span class="header__bottom--dropdown-name">
@@ -296,7 +298,7 @@
                             Футуризм
                     </button>
                     <div class="header__bottom--dropdown">
-                        <ul data-simplebar="init" class="header__bottom--dropdown-list">
+                        <ul class="header__bottom--dropdown-list">
                             <li tabindex="0" class="header__bottom--dropdown-item kappa">
                                 <span class="header__bottom--dropdown-name">
                                     Карра
@@ -352,8 +354,8 @@
                       <div class="hero__swiper-slide hero__swiper-slide-2"></div>
                       <div class="hero__swiper-slide hero__swiper-slide-3"></div>
                     </div>
-    
-                    </div>
+
+                </div>
 
                     <div class="hero__content container">
                         <h1 class="hero__h1">
@@ -534,6 +536,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div data-target="France" class="tab__content">
                     <p class="margin_descr tabs__descr">
                         Франция подарила миру много ярких оригинальных художников. И это не только импрессионисты, которые поколебали многовековые традиции. Страна соседствует с колыбелью живописи — прекрасной Италией. Поэтому неудивительно, что Ренессанс оказал большое влияние на творческих людей. Но национальная оригинальная школа не сформировалась; Франция не может похвастаться мастерами, превосходящими по таланту знаменитых Леонардо да Винчи или Караваджо. Уроженцы этой солнечной страны внесли свой вклад в мировое искусство в другое время.
@@ -556,14 +559,352 @@
                         В галерею
                     </a>
                 </div>
-                <div data-target="Italy" class="tab__content">
+                <div data-target="Italy" class="tab-content-active tab__content">
                     <p class="margin_descr tabs__descr">
                         Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
                     </p>
-                    <div class="italy__content">
+                    <div class="flex italy__content">
+                        <div class="italy__content-left">
+                            <div data-target="painter-1" class="italy__left-painter">
+                                <img src="img/beneddito.jpeg" class="accordion__tab-img" alt="Изоображение Бенедетто ди Биндо">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Бенедетто ди Биндо
+                                    </h3>
+                                    <span class="accordion__tab_life-time">
+                                        ок. 1380–85 — 19 сентября 1417
+                                    </span>
+                                    <p class="italy__left-painter-text_descr grinlandayo_descr">
+                                        Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-target="painter-2" class="italy__left-painter">
+                                <img src="img/bergonione.jpeg" class="accordion__tab-img" alt="Изоображение Бергоньоне, Амброджо">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Бергоньоне, Амброджо
+                                    </h3>
+                                    <span class="accordion__tab_life-time">
+                                        1453 г. — 1523 г.
+                                    </span>
+                                    <p class="italy__left-painter-text_descr grinlandayo_descr">
+                                        Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486–1494 в монастырской обители картезианцев Чертоза ди Павия. Позднее работал в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в Бергамо, незадолго до смерти — снова в Милане, в базилике Сан-Симпличано.
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-target="painter-3" class="italy__left-painter">
+                                <img src="img/bissolo.jpeg" class="accordion__tab-img" alt="Изоображение Биссоло, Франческо">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Биссоло, Франческо
+                                    </h3>
+                                    <span class="accordion__tab_life-time">
+                                        1470 г. — 20 апреля 1554 г.
+                                    </span>
+                                    <p class="italy__left-painter-text_descr grinlandayo_descr">
+                                        Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции. Художник эпохи Возрождения. В своём творчестве подражал Джорджоне.
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-target="painter-4" class="italy__left-painter">
+                                <img src="img/boltraffio.jpeg" class="accordion__tab-img" alt="Изоображение Больтраффио, Джованни">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Больтраффио, Джованни
+                                    </h3>
+                                    <span class="accordion__tab_life-time">
+                                        1466 г. или 1467 г. - 1516 г.
+                                    </span>
+                                    <p class="italy__left-painter-text_descr grinlandayo_descr">
+                                        Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился своими психологическими портретами.
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-target="painter-5" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-6" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-7" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-8" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-9" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-10" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-11" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-12" class="italy__left-painter-active italy__left-painter">
+                                <img src="img/Domeniko_grenlandayo.jpg" class="accordion__tab-img" alt="Изоображение Доменико Гирландайо">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Доменико Гирландайо
+                                    </h3>
+                                    <span class="accordion__tab_life-time">
+                                        2 июня 1448 - 11 января 1494
+                                    </span>
+                                    <p class="italy__left-painter-text_descr grinlandayo_descr">
+                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-target="painter-13" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-14" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-15" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-16" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-17" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-18" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-19" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-20" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-21" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-22" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-23" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-target="painter-24" class="italy__left-painter">
+                                <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
+                                <div class="italy__left-painter_text">
+                                    <h3 class="accordion__tab-h3">
+                                        Что мы о нем знаем?
+                                    </h3>
+                                    <p class="italy__left-painter-text_descr">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#gallery" class="to_gallery">
+                                        В галерею
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="italy__content-right">
                             <ul id="accordion" class="italy__accordion-list">
-                                <li class="italy__accordion-item">
+                                <li class="italy__accordion-item ui-state-active">
                                     <div class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1400 по 1499 гг.
@@ -576,122 +917,122 @@
                                     <div class="italy__accordion-bottom">
                                         <ul class="accordion__people-list">
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-1" class="accordion__painter-name">
                                                     Бенедетто ди Биндо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-2" class="accordion__painter-name">
                                                     Бергоньоне, Амброджо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-3" class="accordion__painter-name">
                                                     Биссоло, Франческо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-4" class="accordion__painter-name">
                                                     Больтраффио, Джованни
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-5" class="accordion__painter-name">
                                                     Бонсиньори, Франческо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-6" class="accordion__painter-name">
                                                     Боттичини, Рафаэлло
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-7" class="accordion__painter-name">
                                                     Брамантино
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-8" class="accordion__painter-name">
                                                     Бреа, Людовико
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-9" class="accordion__painter-name">
                                                     Бьяджо д’Антонио Туччи
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-10" class="accordion__painter-name">
                                                     Веккьетта
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-11" class="accordion__painter-name">
                                                     Андреа Верроккьо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-12" class="accordion__painter-name-active accordion__painter-name">
                                                     Доменико Гирландайо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-13" class="accordion__painter-name">
                                                     Беноццо Гоццоли
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-14" class="accordion__painter-name">
                                                     Граначчи, Франческо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-15" class="accordion__painter-name">
                                                     Грегорио ди Чекко
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-16" class="accordion__painter-name">
                                                     Джованни да Удине
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-17" class="accordion__painter-name">
                                                     Джованни ди Паоло
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-18" class="accordion__painter-name">
                                                     Джорджоне
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-19" class="accordion__painter-name">
                                                     Парентино, Бернардо
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-20" class="accordion__painter-name">
                                                     Пезеллино
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-21" class="accordion__painter-name">
                                                     Пьетро Перуджино
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-22" class="accordion__painter-name">
                                                     Перуцци, Бальдассаре
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-23" class="accordion__painter-name">
                                                     Пизанелло
                                                 </a>
                                             </li>
                                             <li class="accordion__people">
-                                                <a href="#" class="accordion__painter-name">
+                                                <a data-path="painter-24" class="accordion__painter-name">
                                                     Пинтуриккьо
                                                 </a>
                                             </li>
@@ -709,8 +1050,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="italy__accordion-item">
@@ -724,8 +1078,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="italy__accordion-item">
@@ -739,8 +1106,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="italy__accordion-item">
@@ -754,8 +1134,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="italy__accordion-item">
@@ -769,8 +1162,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="italy__accordion-item">
@@ -784,8 +1190,21 @@
                                         </svg>
 
                                     </div>
-                                    <div class="italy__accordion-bottom">
+                                    <div class="italy__accordion-bottom flex">
+                                        <div class="italy__accordion_dont-know-img">
 
+                                        </div>
+                                        <div class="italy__accordion_dont-know_text-content">
+                                            <h3 class="italy__accordion_dont-know-title">
+                                                Здесь пока пусто
+                                            </h3>
+                                            <p class="italy__accordion_dont-know-descr">
+                                                А в галерее вы всегда можете найти что-то интересное для себя
+                                            </p>
+                                            <a href="#gallery" class="to_gallery">
+                                                В галерею
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -816,6 +1235,154 @@
                 </div>
             </div>
         </section>
+        <section id="events" class="events">
+            <div class="container events__container">
+                <h2 class="section__h2 events__h2">
+                    События
+                </h2>
+                <div class="events__swiper_container">
+                    <div class="swiper events__new-swiper">
+                        <div class="events__swiper-right-btns">
+                        <button class="events__btn events-swiper-btn--prev"></button>
+                        <div class="swiper-pagination--right"></div>
+                        <button class="events__btn events-swiper-btn--next"></button>
+                        </div>
+                        <div class="flex events__swiper-wrapper">
+                            <div tabindex="0" class="events__swiper-slide">
+                                <picture>
+                                    <source src="img/events-1.jpg" media="(max-width: 1920px)">
+                                    <source src="img/events-1-1024.jpg" media="(max-width: 1024px)">
+                                    <source src="img/events-1-768.jpg" media="(max-width: 768px)">
+                                    <source src="img/events-1-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-1.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Музей им. Щусева<br>
+                                            с 20 марта по 30 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Книжная гравюра в живом восприятии
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div tabindex="0" class="events__swiper-slide">
+                                <picture>
+                                    <source src="img/events-2.jpg" media="(max-width: 1920px)">
+                                    <source src="img/events-2-1024.jpg" media="(max-width: 1024px)">
+                                    <source src="img/events-2-768.jpg" media="(max-width: 768px)">
+                                    <source src="img/events-2-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-2.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            ММОМА<br>
+                                            24 марта 19:00
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div tabindex="0" class="events__swiper-slide">
+                                <picture>
+                                    <source src="img/events-3.jpg" media="(max-width: 1920px)">
+                                    <source src="img/events-3-1024.jpg" media="(max-width: 1024px)">
+                                    <source src="img/events-3-768.jpg" media="(max-width: 768px)">
+                                    <source src="img/events-3-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-3.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Еврейский музей<br>
+                                            с 31 марта по 21 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Выставка «Формация 2020»
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div tabindex="0" class="events__swiper-slide">
+                                <picture>
+                                    <source src="img/events-4.jpg" media="(max-width: 1920px)">
+                                    <source src="img/events-4-1024.jpg" media="(max-width: 1024px)">
+                                    <source src="img/events-4-768.jpg" media="(max-width: 768px)">
+                                    <source src="img/events-4-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-4.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Третьяковка на Крымском валу<br>
+                                            с 30 марта по 30 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            XXIV Международная биеннале молодого искусства
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Внезапно, реплицированные с зарубежных источников, современные исследования.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <div tabindex="0" class="events__swiper-slide">
+                                <picture>
+                                    <source src="img/events-5.jpg" media="(max-width: 1920px)">
+                                    <source src="img/events-5-1024.jpg" media="(max-width: 1024px)">
+                                    <source src="img/events-5-768.jpg" media="(max-width: 768px)">
+                                    <source src="img/events-5-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-5.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            ММАМ<br>
+                                            с 8 апреля по 20 мая
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Джон Винзор. Фотографии из серии «Метафора серебра»
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     
@@ -829,5 +1396,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>
