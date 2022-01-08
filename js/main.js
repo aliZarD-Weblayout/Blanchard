@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 1,
   effect: 'fade',
   loop: true,
+  direction: 'vertical',
+  speed: 300,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -85,32 +87,56 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-  let gallerySlider = new Swiper(".gallery__swiper-wrapper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    grid: {
+let gallerySlider = new Swiper(".swiper-right--content", {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  direction: 'vertical',
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination--right",
+    type: "fraction"
+  },
+  navigation: {
+    nextEl: ".swiper-btn--next",
+    prevEl: ".swiper-btn--prev"
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      grid: {
         rows: 1
+      },
+      spaceBetween: 0
     },
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination--right",
-      type: "fraction"
+    576: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 30
     },
-    navigation: {
-      nextEl: ".swiper-btn--next",
-      prevEl: ".swiper-btn--prev"
-    },
-  
-    a11y: {
-      prevSlideMessage: 'Предыдущий',
-      nextSlideMessage: 'Следующий',
+
+    1200: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 50
     }
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущий',
+    nextSlideMessage: 'Следующий',
+  }
 })
 
 
 
 
 // catalog
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.catalog__country-btn').forEach(function(tabsLink) {
         tabsLink.addEventListener('click', function(event) {
@@ -120,12 +146,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabContent.classList.remove('tab-content-active')
             })
             document.querySelector(`[data-target="${path}"]`).classList.toggle('tab-content-active')
-            document.querySelectorAll('.catalog__country-btn').forEach(function(tabBtn) {
-                tabBtn.classList.remove('catalog__country-btn-active')
-            })
-            e.currentTarget.classList.add('catalog__country-btn-active')
         })
     })
+})
+
+const catalogCountry = document.querySelectorAll(".catalog__country-btn")
+
+catalogCountry.forEach(function(catalogCountryTab) {
+  catalogCountryTab.addEventListener("click", function() {
+      let currentCatalogCountry = catalogCountryTab
+
+      catalogCountry.forEach(function(catalogCountryTab) {
+        catalogCountryTab.classList.remove('catalog__country-btn-active')
+      })
+
+      currentCatalogCountry.classList.add('catalog__country-btn-active')
+  })
 })
 
 $( function() {
@@ -136,3 +172,67 @@ $( function() {
        active: false
      });
 } );
+
+
+
+// PAINTER-TAB
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.accordion__painter-name').forEach(function(painterTabs) {
+      painterTabs.addEventListener('click', function(eventPainter) {
+          const path = eventPainter.currentTarget.dataset.path
+
+          document.querySelectorAll('.italy__left-painter').forEach(function(PainterTabContent) {
+              PainterTabContent.classList.remove('italy__left-painter-active')
+          })
+          document.querySelector(`[data-target="${path}"]`).classList.toggle('italy__left-painter-active')
+      })
+  })
+})
+
+const catalogPainter = document.querySelectorAll(".accordion__painter-name")
+
+catalogPainter.forEach(function(catalogPainterTab) {
+catalogPainterTab.addEventListener("click", function() {
+    let currentCatalogPainter = catalogPainterTab
+
+    catalogPainter.forEach(function(catalogPainterTab) {
+      catalogPainterTab.classList.remove('accordion__painter-name-active')
+    })
+
+    currentCatalogPainter.classList.add('accordion__painter-name-active')
+})
+})
+
+
+
+// EVENTS
+
+const eventsContainer = document.querySelector(".events__swiper_container")
+    const eventsSwiper = new Swiper('#events__new-swiper', {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        pagination: {
+          el: ".swiper-pagination--right",
+          type: "fraction"
+        },
+        navigation: {
+          nextEl: ".swiper-btn--next",
+          prevEl: ".swiper-btn--prev"
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+  
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 50
+      }
+    },
+    })
