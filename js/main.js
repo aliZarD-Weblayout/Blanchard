@@ -21,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
       btn.classList.toggle("dropdown-btn-active")
     })
   })
-
-  
   
   document.addEventListener("click", function(e) {
     let target = e.target;
@@ -40,37 +38,29 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('#burger').addEventListener('click', function() {
           document.querySelector('#burger-menu').classList.toggle('header__burger-active')
-
       })
   })
-
 // HERO
 
-    const container = document.querySelector(".hero__container")
-    const swiper = new Swiper('#hero__swiper', {
-        slidesPerView: 1,
-  effect: 'fade',
-  loop: true,
-  direction: 'vertical',
-  speed: 300,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  on: {
-    init() {
-      this.el.addEventListener('mouseenter', () => {
-        this.autoplay.stop(5000);
-      });
+const heroContainer = document.querySelector(".hero__container")
+const heroSwiper = new Swiper('.hero__new-swiper', {
+    slidesPerView: 1,
+    speed: 300,
+    a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+        containerRoleDescriptionMessage: String,
+        enabled: Boolean,
+        paginationBulletMessage: String,
+        prevSlideMessage: String,
+        itemRoleDescriptionMessage: String,
+        lastSlideMessage: String,
+        nextSlideMessage: String,
+        slideLabelMessage: String,
+        slideRole: String,
+      },
+});
 
-      this.el.addEventListener('mouseleave', () => {
-        this.autoplay.start(5000);
-      });
-    }
-  },
-    })
-
-    
 
 // GALLERY
 
@@ -207,24 +197,47 @@ catalogPainterTab.addEventListener("click", function() {
 
 
 // EVENTS
+new Swiper('.events__swiper-wrapper', {
+  slidesPerView: 3,
+  spaceBetween: 40,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: ".partners__next-btn",
+    prevEl: ".partners__prev-btn"
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
 
-const eventsContainer = document.querySelector(".events__swiper_container")
-    const eventsSwiper = new Swiper('#events__new-swiper', {
-        slidesPerView: 3,
-        spaceBetween: 40,
-        pagination: {
-          el: ".swiper-pagination--right",
-          type: "fraction"
-        },
-        navigation: {
-          nextEl: ".swiper-btn--next",
-          prevEl: ".swiper-btn--prev"
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  },
+})
+
+// projects
+
+const partnersSlider = new Swiper('.partners__swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    slidesPerGroup: 3,
+    navigation: {
+      nextEl: ".partners__next-btn",
+      prevEl: ".partners__prev-btn"
     },
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 0
       },
+      
       576: {
         slidesPerView: 2,
         spaceBetween: 30
@@ -232,7 +245,62 @@ const eventsContainer = document.querySelector(".events__swiper_container")
   
       1200: {
         slidesPerView: 3,
-        spaceBetween: 50
+        spaceBetween: 30
       }
     },
-    })
+})
+
+// contacts
+
+let tel = document.querySelector("#contacts__input-tel")
+
+  var im = new Inputmask("+7 (999) 999-99-99")
+
+  im.mask(tel);
+  new window.JustValidate("#contacts__form", {
+
+      rules: {
+        name: {
+          required: true,
+          minLenght: 2,
+          maxLenght: 20
+        },
+
+        tel: {
+          required: true,
+          function: (name, value) => {
+            const ph = tel.inputmask.unmaskedvalue();
+            return Number(ph) && ph.length ===  10;
+          }
+      },
+      },
+
+     messages: {
+           name: "Как вас зовут?",
+           tel: {
+             required: "Укажите ваш телефон",
+             function: "Не достаточно количество символов"
+           }
+         }
+    });
+
+
+
+    // map
+
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 10
+        });
+
+        var PlaceMark = new ymaps.Placemark([55.70, 37.51], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'js/metka.svg',
+            iconImageSize:  [20, 60],
+            iconImageOffset:  [-3, -42]
+      });
+
+      myMap.geoObjects.add(PlaceMark);
+    }
