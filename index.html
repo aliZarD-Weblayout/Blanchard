@@ -7,6 +7,8 @@
     <title>Blanchard - художественная галерея</title>
     <link rel="shortcut icon" href="img/Blanchard-favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -357,13 +359,11 @@
         <section class="hero" id="hero">
             <div class="hero__container">
                 <div id="hero__swiper" class="swiper hero__new-swiper">
-                    <div class="swiper-wrapper">
-                      <div class="hero__swiper-slide hero__swiper-slide-1"></div>
-                      <div class="hero__swiper-slide hero__swiper-slide-2"></div>
-                      <div class="hero__swiper-slide hero__swiper-slide-3"></div>
+                    <div class="swiper-wrapper hero__swiper-wrapper">
+                      <div class="hero__swiper-slide swiper-slide hero__swiper-slide-1"></div>
+                      <div class="hero__swiper-slide swiper-slide hero__swiper-slide-2"></div>
+                      <div class="hero__swiper-slide swiper-slide hero__swiper-slide-3"></div>
                     </div>
-
-                    <div class="hero__pagination"></div>
 
                 </div>
 
@@ -458,7 +458,7 @@
                           <div class="swiper-pagination--right"></div>
                           <button class="sw-btn swiper-btn--next"></button>
                         </div>
-                        <div class="gallery__swiper-wrapper">
+                        <div class="gallery__swiper-wrapper swiper-wrapper">
                             <div tabindex="0" class="gallery__swiper-slide swiper-slide">
                                 <picture>
                                     <source srcset="img/gallery-slide-1.png" media="(max-width: 1920px)">
@@ -1250,143 +1250,142 @@
                 <h2 class="section__h2 events__h2">
                     События
                 </h2>
-                <div class="events__swiper_container">
-                    <div class="swiper events__new-swiper">
-                        <div class="events__swiper-right-btns">
-                        <button class="events__btn events-swiper-btn--prev"></button>
-                        <div class="swiper-pagination--right"></div>
-                        <button class="events__btn events-swiper-btn--next"></button>
+                <div  class="swiper events__swiper">
+                    <button class="events__btn events-swiper-btn--prev">
+                        
+                    </button>
+                    <button class="events__btn events-swiper-btn--next">
+                        
+                    </button>
+                    <div class="events__swiper-wrapper swiper-wrapper">
+                        <div tabindex="0" class="swiper-slide events__swiper-slide">
+                            <picture>
+                                <source srcset="img/events-1.jpg" media="(max-width: 1920px)">
+                                <source srcset="img/events-1-1024.jpg" media="(max-width: 1024px)">
+                                <source srcset="img/events-1-768.jpg" media="(max-width: 768px)">
+                                <source srcset="img/events-1-320.jpg" media="(max-width: 576px)">
+                                <img class="events__slide-img" src="img/events-1.jpg" alt="events-slide">
+                            </picture>
+                            <div class="events__swiper-slide_text">
+                                <div class="events__swiper-slide_text-content">
+                                    <span class="events__swiper-slide_name-time">
+                                        Музей им. Щусева<br>
+                                        с 20 марта по 30 апреля
+                                    </span>
+                                    <h3 class="events__swiper-slide_title">
+                                        Книжная гравюра в живом восприятии
+                                    </h3>
+                                    <p class="events__swiper-slide_descr">
+                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                    </p>
+                                </div>
+                                <a href="#" class="events__swiper-slide_link">
+                                    Подробнее
+                                </a>
+                            </div>
                         </div>
-                        <div class="flex events__swiper-wrapper">
-                            <div tabindex="0" class="events__swiper-slide">
-                                <picture>
-                                    <source srcset="img/events-1.jpg" media="(max-width: 1920px)">
-                                    <source srcset="img/events-1-1024.jpg" media="(max-width: 1024px)">
-                                    <source srcset="img/events-1-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="img/events-1-320.jpg" media="(max-width: 576px)">
-                                    <img class="events__slide-img" src="img/events-1.jpg" alt="events-slide">
-                                </picture>
-                                <div class="events__swiper-slide_text">
-                                    <div class="events__swiper-slide_text-content">
-                                        <span class="events__swiper-slide_name-time">
-                                            Музей им. Щусева<br>
-                                            с 20 марта по 30 апреля
-                                        </span>
-                                        <h3 class="events__swiper-slide_title">
-                                            Книжная гравюра в живом восприятии
-                                        </h3>
-                                        <p class="events__swiper-slide_descr">
-                                            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
-                                        </p>
-                                    </div>
-                                    <a href="#" class="events__swiper-slide_link">
-                                        Подробнее
-                                    </a>
+                        <div tabindex="0" class="swiper-slide events__swiper-slide">
+                            <picture>
+                                <source srcset="img/events-2.jpg" media="(max-width: 1920px)">
+                                <source srcset="img/events-2-1024.jpg" media="(max-width: 1024px)">
+                                <source srcset="img/events-2-768.jpg" media="(max-width: 768px)">
+                                <source srcset="img/events-2-320.jpg" media="(max-width: 576px)">
+                                <img class="events__slide-img" src="img/events-2.jpg" alt="events-slide">
+                            </picture>
+                            <div class="events__swiper-slide_text">
+                                <div class="events__swiper-slide_text-content">
+                                    <span class="events__swiper-slide_name-time">
+                                        ММОМА<br>
+                                        24 марта 19:00
+                                    </span>
+                                    <h3 class="events__swiper-slide_title">
+                                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                                    </h3>
+                                    <p class="events__swiper-slide_descr">
+                                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                                    </p>
                                 </div>
+                                <a href="#" class="events__swiper-slide_link">
+                                    Подробнее
+                                </a>
                             </div>
-                            <div tabindex="0" class="events__swiper-slide">
-                                <picture>
-                                    <source srcset="img/events-2.jpg" media="(max-width: 1920px)">
-                                    <source srcset="img/events-2-1024.jpg" media="(max-width: 1024px)">
-                                    <source srcset="img/events-2-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="img/events-2-320.jpg" media="(max-width: 576px)">
-                                    <img class="events__slide-img" src="img/events-2.jpg" alt="events-slide">
-                                </picture>
-                                <div class="events__swiper-slide_text">
-                                    <div class="events__swiper-slide_text-content">
-                                        <span class="events__swiper-slide_name-time">
-                                            ММОМА<br>
-                                            24 марта 19:00
-                                        </span>
-                                        <h3 class="events__swiper-slide_title">
-                                            «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                                        </h3>
-                                        <p class="events__swiper-slide_descr">
-                                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
-                                        </p>
-                                    </div>
-                                    <a href="#" class="events__swiper-slide_link">
-                                        Подробнее
-                                    </a>
+                        </div>
+                        <div tabindex="0" class="swiper-slide events__swiper-slide">
+                            <picture>
+                                <source srcset="img/events-3.jpg" media="(max-width: 1920px)">
+                                <source srcset="img/events-3-1024.jpg" media="(max-width: 1024px)">
+                                <source srcset="img/events-3-768.jpg" media="(max-width: 768px)">
+                                <source srcset="img/events-3-320.jpg" media="(max-width: 576px)">
+                                <img class="events__slide-img" src="img/events-3.jpg" alt="events-slide">
+                            </picture>
+                            <div class="events__swiper-slide_text">
+                                <div class="events__swiper-slide_text-content">
+                                    <span class="events__swiper-slide_name-time">
+                                        Еврейский музей<br>
+                                        с 31 марта по 21 апреля
+                                    </span>
+                                    <h3 class="events__swiper-slide_title">
+                                        Выставка «Формация 2020»
+                                    </h3>
+                                    <p class="events__swiper-slide_descr">
+                                        Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+                                    </p>
                                 </div>
+                                <a href="#" class="events__swiper-slide_link">
+                                    Подробнее
+                                </a>
                             </div>
-                            <div tabindex="0" class="events__swiper-slide">
-                                <picture>
-                                    <source srcset="img/events-3.jpg" media="(max-width: 1920px)">
-                                    <source srcset="img/events-3-1024.jpg" media="(max-width: 1024px)">
-                                    <source srcset="img/events-3-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="img/events-3-320.jpg" media="(max-width: 576px)">
-                                    <img class="events__slide-img" src="img/events-3.jpg" alt="events-slide">
-                                </picture>
-                                <div class="events__swiper-slide_text">
-                                    <div class="events__swiper-slide_text-content">
-                                        <span class="events__swiper-slide_name-time">
-                                            Еврейский музей<br>
-                                            с 31 марта по 21 апреля
-                                        </span>
-                                        <h3 class="events__swiper-slide_title">
-                                            Выставка «Формация 2020»
-                                        </h3>
-                                        <p class="events__swiper-slide_descr">
-                                            Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
-                                        </p>
-                                    </div>
-                                    <a href="#" class="events__swiper-slide_link">
-                                        Подробнее
-                                    </a>
+                        </div>
+                        <div tabindex="0" class="swiper-slide events__swiper-slide">
+                            <picture>
+                                <source srcset="img/events-4.jpg" media="(max-width: 1920px)">
+                                <source srcset="img/events-4-1024.jpg" media="(max-width: 1024px)">
+                                <source srcset="img/events-4-768.jpg" media="(max-width: 768px)">
+                                <source srcset="img/events-4-320.jpg" media="(max-width: 576px)">
+                                <img class="events__slide-img" src="img/events-4.jpg" alt="events-slide">
+                            </picture>
+                            <div class="events__swiper-slide_text">
+                                <div class="events__swiper-slide_text-content">
+                                    <span class="events__swiper-slide_name-time">
+                                        Третьяковка на Крымском валу<br>
+                                        с 30 марта по 30 апреля
+                                    </span>
+                                    <h3 class="events__swiper-slide_title">
+                                        XXIV Международная биеннале молодого искусства
+                                    </h3>
+                                    <p class="events__swiper-slide_descr">
+                                        Внезапно, реплицированные с зарубежных источников, современные исследования.
+                                    </p>
                                 </div>
+                                <a href="#" class="events__swiper-slide_link">
+                                    Подробнее
+                                </a>
                             </div>
-                            <div tabindex="0" class="events__swiper-slide">
-                                <picture>
-                                    <source srcset="img/events-4.jpg" media="(max-width: 1920px)">
-                                    <source srcset="img/events-4-1024.jpg" media="(max-width: 1024px)">
-                                    <source srcset="img/events-4-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="img/events-4-320.jpg" media="(max-width: 576px)">
-                                    <img class="events__slide-img" src="img/events-4.jpg" alt="events-slide">
-                                </picture>
-                                <div class="events__swiper-slide_text">
-                                    <div class="events__swiper-slide_text-content">
-                                        <span class="events__swiper-slide_name-time">
-                                            Третьяковка на Крымском валу<br>
-                                            с 30 марта по 30 апреля
-                                        </span>
-                                        <h3 class="events__swiper-slide_title">
-                                            XXIV Международная биеннале молодого искусства
-                                        </h3>
-                                        <p class="events__swiper-slide_descr">
-                                            Внезапно, реплицированные с зарубежных источников, современные исследования.
-                                        </p>
-                                    </div>
-                                    <a href="#" class="events__swiper-slide_link">
-                                        Подробнее
-                                    </a>
+                        </div>
+                        <div tabindex="0" class="swiper-slide events__swiper-slide">
+                            <picture>
+                                <source srcset="img/events-5.jpg" media="(max-width: 1920px)">
+                                <source srcset="img/events-5-1024.jpg" media="(max-width: 1024px)">
+                                <source srcset="img/events-5-768.jpg" media="(max-width: 768px)">
+                                <source srcset="img/events-5-320.jpg" media="(max-width: 576px)">
+                                <img class="events__slide-img" src="img/events-5.jpg" alt="events-slide">
+                            </picture>
+                            <div class="events__swiper-slide_text">
+                                <div class="events__swiper-slide_text-content">
+                                    <span class="events__swiper-slide_name-time">
+                                        ММАМ<br>
+                                        с 8 апреля по 20 мая
+                                    </span>
+                                    <h3 class="events__swiper-slide_title">
+                                        Джон Винзор. Фотографии из серии «Метафора серебра»
+                                    </h3>
+                                    <p class="events__swiper-slide_descr">
+                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                    </p>
                                 </div>
-                            </div>
-                            <div tabindex="0" class="events__swiper-slide">
-                                <picture>
-                                    <source srcset="img/events-5.jpg" media="(max-width: 1920px)">
-                                    <source srcset="img/events-5-1024.jpg" media="(max-width: 1024px)">
-                                    <source srcset="img/events-5-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="img/events-5-320.jpg" media="(max-width: 576px)">
-                                    <img class="events__slide-img" src="img/events-5.jpg" alt="events-slide">
-                                </picture>
-                                <div class="events__swiper-slide_text">
-                                    <div class="events__swiper-slide_text-content">
-                                        <span class="events__swiper-slide_name-time">
-                                            ММАМ<br>
-                                            с 8 апреля по 20 мая
-                                        </span>
-                                        <h3 class="events__swiper-slide_title">
-                                            Джон Винзор. Фотографии из серии «Метафора серебра»
-                                        </h3>
-                                        <p class="events__swiper-slide_descr">
-                                            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
-                                        </p>
-                                    </div>
-                                    <a href="#" class="events__swiper-slide_link">
-                                        Подробнее
-                                    </a>
-                                </div>
+                                <a href="#" class="events__swiper-slide_link">
+                                    Подробнее
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1406,6 +1405,12 @@
                 </h3>
                 <div class="partners">
                     <div class="partners__swiper-container">
+                        <button class="partners__nav-btn partners__prev-btn">
+                            
+                        </button>
+                        <button class="partners__nav-btn partners__next-btn">
+                            
+                        </button>
                         <div class="swiper-wrapper partners__swiper-wrapper">
                             <div class="swiper-slide partners__swiper-slide">
                                 <a href="#" class="partners__swiper-slide_link">
