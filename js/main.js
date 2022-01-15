@@ -51,8 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const heroSwiper = new Swiper('#hero__swiper', {
   slidesPerView: 1,
-  speed: 300,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 8000,
+  },
+  effect: 'fade',
+  loop: true,
   a11y: {
+      containerRoleDescriptionMessage: "Слайдер Художественная галерея",
+      paginationBulletMessage: "Переключить слайд на номер {{index}}",
       containerRoleDescriptionMessage: String,
       enabled: Boolean,
       paginationBulletMessage: String,
@@ -82,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let gallerySlider = new Swiper(".swiper-right--content", {
 slidesPerView: 3,
-  spaceBetween: 40,
+  spaceBetween: 30,
   slidesPerGroup: 3,
   navigation: {
     nextEl: ".swiper-btn--next",
@@ -115,36 +122,34 @@ a11y: {
 }
 })
 
+// modal
 
-// catalog
+const body = document.querySelector("#body")
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.catalog__country-btn').forEach(function(tabsLink) {
-      tabsLink.addEventListener('click', function(event) {
-          const path = event.currentTarget.dataset.path
-
-          document.querySelectorAll('.tab__content').forEach(function(tabContent) {
-              tabContent.classList.remove('tab-content-active')
-          })
-          document.querySelector(`[data-target="${path}"]`).classList.toggle('tab-content-active')
-      })
+let gallerySlides = document.querySelector(".gallery__swiper-right").querySelectorAll(".gallery__swiper-slide");
+let modal = document.querySelector(".gallery__swiper-modal");
+let modalBtn = modal.querySelector(".modal-close");
+gallerySlides.forEach(el => {
+  el.addEventListener("click", function() {
+    let img = this.querySelector("img");
+    let link = img.getAttribute("src");
+    modal.classList.add("modal-active");
+    body.classList.add("lock");
+    modal.querySelector("img").setAttribute("src", link);
   })
 })
+modalBtn.addEventListener("click", function() {
+  modal.classList.remove("modal-active");
+});
 
-const catalogCountry = document.querySelectorAll(".catalog__country-btn")
+modalBtn.addEventListener("click", function() {
+  body.classList.remove("lock");
+});
 
-catalogCountry.forEach(function(catalogCountryTab) {
-catalogCountryTab.addEventListener("click", function() {
-    let currentCatalogCountry = catalogCountryTab
 
-    catalogCountry.forEach(function(catalogCountryTab) {
-      catalogCountryTab.classList.remove('catalog__country-btn-active')
-    })
 
-    currentCatalogCountry.classList.add('catalog__country-btn-active')
-})
-})
 
+// catalog
 $( function() {
   $( "#accordion" ).accordion({
      icons: false,
@@ -190,7 +195,7 @@ catalogPainterTab.addEventListener("click", function() {
 // EVENTS
 const eventsSlider = new Swiper('.events__swiper', {
 slidesPerView: 3,
-spaceBetween: 40,
+spaceBetween: 39,
 navigation: {
   nextEl: ".events-swiper-btn--next",
   prevEl: ".events-swiper-btn--prev"
@@ -202,12 +207,12 @@ breakpoints: {
   },
   576: {
     slidesPerView: 2,
-    spaceBetween: 30
+    spaceBetween: 20
   },
 
   1200: {
     slidesPerView: 3,
-    spaceBetween: 30
+    spaceBetween: 39
   }
 },
 })
@@ -282,7 +287,7 @@ new window.JustValidate("#contacts__form", {
   function init(){
       var myMap = new ymaps.Map("map", {
           center: [55.76, 37.64],
-          zoom: 11
+          zoom: 13
       });
 
       var PlaceMark = new ymaps.Placemark([55.70, 37.51], {}, {
