@@ -12,13 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body id="body" class="body">
     <header class="header" id="header">
         <div class="header__top">
             <div class="header__container container flex">
                 <div class="header__left">
-                    <div id="burger-menu" class="header__burger-menu">
+                    <div id="burger-menu" aria-label="Открытие бургера" class="header__burger-menu">
+                        <svg class="burger__close-btn" id="burger__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+                            <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
+                        </svg>                            
                         <nav class="header__burger-nav">
                             <ul class="header__burger-list flex">
                                 <li class="header__burger-list-item">
@@ -66,7 +71,12 @@
                         </a>
                     </div>
                     <button id="burger" class="header__burger-btn">
-                        <span class="header__burger-span"></span>
+                        <!-- <span class="header__burger-span"></span> -->
+                        <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+                            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+                            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+                        </svg>                            
                     </button>
                     <a href="#" class="header__left-logo-link">
                         <img src="img/Blanchard-logo.png" alt="Logotip">
@@ -75,7 +85,7 @@
 
                 <div class="header__center">
                     <a href="#" class="header__center-logo-link">
-                        <img src="img/Blanchard-logo.png" alt="Logotip">
+                        <img class="header__center-logotip" src="img/Blanchard-logo.png" alt="Logotip">
                     </a>
                     <nav class="header__nav">
                         <ul class="header__list flex">
@@ -116,21 +126,39 @@
                             </li>
                         </ul>
                     </nav>
+                    
                 </div>
 
                 <div class="header__right">
-                    <a href="#" class="header__right-link">
+                    <a href="#" aria-label="Вход в аккаунт" class="header__right-link">
                         <svg class="header__right_svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
                         </svg>  
                         Войти                      
                     </a>
-                    <button class="header__search-btn">
+                    <button aria-label="Поиск по сайту" class="header__search-btn" id="search">
                         <svg class="search_btn-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
                         </svg>                        
                     </button>
+                    <div class="search-menu" id="search-menu">
+                        <form class="header__bottom-form" action="https://jsonplaceholder.typicode.com/posts">
+                            <button aria-label="Поиск по сайту" class="search__btn">
+                                <svg class="search_btn-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                                </svg>                                      
+                            </button>
+                            <input placeholder="Поиск по сайту" class="header__search__input search-input" type="text">
+                        </form>
+                        <button aria-label="Закрытие поиска" id="search-close" class="search-close-btn">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)" fill="white"/>
+                                <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)" fill="white"/>
+                                </svg>                                
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,39 +166,39 @@
         <div class="header__bottom-block container flex">
             <ul class="header__bottom-list flex">
                 <li class="header__bottom-list-item">
-                    <button class="header__bottom-btn header__bottom-span">
+                    <button aria-label="Выбор тем художников" class="header__bottom-btn header__bottom-span">
                             Реализм
                     </button>
                     <div class="header__bottom--dropdown">
                         <div class="header__bottom--dropdown-wrapper" data-simplebar>
-                            <ul class="header__bottom--dropdown-list">
+                            <ul aria-label="Наши художники" class="header__bottom--dropdown-list">
                                 <li class="header__bottom--dropdown-item tintorreto">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Тинторрето
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item fridrih">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Фридрих
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item leonardo">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Леонардо
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item verrokio">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Верроккье
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item tintorreto">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Тинторрето
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item fridrih">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Фридрих
                                     </span>
                                 </li>
@@ -179,39 +207,39 @@
                     </div>
                 </li>
                 <li class="header__bottom-list-item">
-                    <button class="header__bottom-btn header__bottom-span">
+                    <button aria-label="Выбор тем художников" class="header__bottom-btn header__bottom-span">
                             Импрессионизм
                     </button>
                     <div class="header__bottom--dropdown">
                         <div class="header__bottom--dropdown-wrapper" data-simplebar>
-                        <ul class="header__bottom--dropdown-list">
+                        <ul aria-label="Наши художники" class="header__bottom--dropdown-list">
                             <li class="header__bottom--dropdown-item mone">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Моне
                                 </span>
                             </li>
                             <li class="header__bottom--dropdown-item sisley">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Сислей
                                 </span>
                             </li>
                             <li class="header__bottom--dropdown-item mane">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Мане
                                 </span>
                             </li>
                             <li class="header__bottom--dropdown-item renuar">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Ренуар
                                 </span>
                             </li>
                             <li class="header__bottom--dropdown-item mone">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Моне
                                 </span>
                             </li>
                             <li class="header__bottom--dropdown-item sisley">
-                                <span class="header__bottom--dropdown-name">
+                                <span aria-label="Художник" class="header__bottom--dropdown-name">
                                     Сислей
                                 </span>
                             </li>
@@ -220,39 +248,39 @@
                     </div>
                 </li> 
                 <li class="header__bottom-list-item">
-                    <button class="header__bottom-btn header__bottom-span">
+                    <button aria-label="Выбор тем художников" class="header__bottom-btn header__bottom-span">
                             Постимпрессионизм
                     </button>
                     <div class="header__bottom--dropdown">
                         <div class="header__bottom--dropdown-wrapper" data-simplebar>
-                            <ul class="header__bottom--dropdown-list">
+                            <ul aria-label="Наши художники" class="header__bottom--dropdown-list">
                                 <li class="header__bottom--dropdown-item van-gog">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Ван Гог
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item sezann">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Сезанн
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item gogen">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Гоген
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item sera">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Сера
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item van-gog">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Ван Гог
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item sezann">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Сезанн
                                     </span>
                                 </li>
@@ -261,39 +289,39 @@
                     </div>
                 </li>
                 <li class="header__bottom-list-item">
-                    <button class="header__bottom-btn header__bottom-span">
+                    <button aria-label="Выбор тем художников" class="header__bottom-btn header__bottom-span">
                             Авангард
                     </button>
                     <div class="header__bottom--dropdown">
                         <div class="header__bottom--dropdown-wrapper" data-simplebar>
-                            <ul class="header__bottom--dropdown-list">
+                            <ul aria-label="Наши художники" class="header__bottom--dropdown-list">
                                 <li class="header__bottom--dropdown-item kandinskiy">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Кандинский
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item marinetti">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Маринетти
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item malevich">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Малевич
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item pikasso">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Пикассо
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item kandinskiy">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Кандинский
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item marinetti">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Маринетти
                                     </span>
                                 </li>
@@ -302,39 +330,39 @@
                     </div>
                 </li>
                 <li class="header__bottom-list-item">
-                    <button class="header__bottom-btn header__bottom-span">
+                    <button aria-label="Выбор тем художников" class="header__bottom-btn header__bottom-span">
                             Футуризм
                     </button>
                     <div class="header__bottom--dropdown">
                         <div class="header__bottom--dropdown-wrapper" data-simplebar>
-                            <ul class="header__bottom--dropdown-list">
+                            <ul aria-label="Наши художники" class="header__bottom--dropdown-list">
                                 <li class="header__bottom--dropdown-item kappa">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Карра
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item pratella">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Прателла
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item severini">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Северини
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item balla">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Балла
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item kappa">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Карра
                                     </span>
                                 </li>
                                 <li class="header__bottom--dropdown-item pratella">
-                                    <span class="header__bottom--dropdown-name">
+                                    <span aria-label="Художник" class="header__bottom--dropdown-name">
                                         Прателла
                                     </span>
                                 </li>
@@ -365,8 +393,6 @@
                       <div class="hero__swiper-slide swiper-slide hero__swiper-slide-3"></div>
                     </div>
 
-                    <div class="swiper-bullet-pagination hero__pagination"></div>
-
                 </div>
 
                     <div class="hero__content container">
@@ -376,7 +402,7 @@
                         <div class="hero__descr">
                             Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
                         </div>
-                        <a href="#newsletter" class="hero__btn">
+                        <a aria-label="Подписаться на рассылку" href="#newsletter" class="hero__btn">
                             Подписаться на рассылку
                         </a>
                     </div>
@@ -393,7 +419,7 @@
                 </p>
             </div>
         </section>
-        <section id="gallery" class="gallery">
+        <section aria-label="Главная галерея картин" id="gallery" class="gallery">
             <div class="gallery__container container">
                 <div class="gallery__left">
                     <div class="h2_select">
@@ -402,7 +428,7 @@
                         </h2>
                         <div class="gallery__select-container">
                             <span class="gallery__select-name">Фильтр:</span>
-                            <select name="gallery-choices" class="gallery__choices" id="gallery-choices">
+                            <select aria-label="Тема на выбор портретов" name="gallery-choices" class="gallery__choices" id="gallery-choices">
                                 <option class="choices_option" value="">Живопись</option>
                                 <option class="choices_option">Рисунок</option>
                                 <option class="choices_option">Скульптура</option>
@@ -411,7 +437,7 @@
                     </div>
                     <div class="checkbox__container">
                         <ul class="checkbox__list">
-                            <li class="checkbox__item">
+                            <li aria-label="Выбор времени" class="checkbox__item">
                                 <label class="checbox_label">
                                     <input class="checkbox_input" type="checkbox">
                                     <span class="checkbox_span"></span>
@@ -420,7 +446,7 @@
                                     </span>
                                 </label>
                             </li>
-                            <li class="checkbox__item">
+                            <li aria-label="Выбор времени" class="checkbox__item">
                                 <label class="checbox_label">
                                     <input class="checkbox_input" type="checkbox">
                                     <span class="checkbox_span"></span>
@@ -429,7 +455,7 @@
                                     </span>
                                 </label>
                             </li>
-                            <li class="checkbox__item">
+                            <li aria-label="Выбор времени" class="checkbox__item">
                                 <label class="checbox_label">
                                     <input class="checkbox_input" type="checkbox">
                                     <span class="checkbox_span"></span>
@@ -442,13 +468,13 @@
                     </div>
                 </div>
                 <div class="swiper gallery__swiper-right">
-                    <div class="gallery__swiper-modal">
+                    <div aria-label="Картина с информацией приближенного рассмотра" aria-hidden="true" class="gallery__swiper-modal">
                         <div class="gallery__modal-content">
                           <div class="gallery__modal-content-left">
                             <img alt="Картина модального окна" class="gallery__modal-img" src="https://searchtips.ru/wp-content/uploads/8/e/d/8ede857c010f1b4d0f203f8d226e339d.jpg" />
                           </div>
                           <div class="gallery__modal-content-right">
-                            <button class="modal-close">
+                            <button aria-label="Закрытие приближенного рассмотра" class="modal-close">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_136320_4417)">
                                     <rect width="19.2824" height="1.92824" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36523 0.00152588)" fill="white"/>
@@ -530,7 +556,7 @@
                 </div>
             </div>
         </section>
-        <section id="catalog" class="catalog">
+        <section aria-label="Каталог нашего сайта" id="catalog" class="catalog">
             <div class="catalog__container container">
                 <div class="catalog__not-remove flex">
                     <h2 class="section__title catalog__title">
@@ -544,7 +570,7 @@
                     </p>
                     <div class="flex italy__content">
                         <div id="tabs__content" class="italy__content-left">
-                            <div data-target="painter-1" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-1" class="italy__left-painter">
                                 <img src="img/beneddito.jpeg" class="accordion__tab-img" alt="Изоображение Бенедетто ди Биндо">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -558,7 +584,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div data-target="painter-2" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-2" class="italy__left-painter">
                                 <img src="img/bergonione.jpeg" class="accordion__tab-img" alt="Изоображение Бергоньоне, Амброджо">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -572,7 +598,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div data-target="painter-3" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-3" class="italy__left-painter">
                                 <img src="img/bissolo.jpeg" class="accordion__tab-img" alt="Изоображение Биссоло, Франческо">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -586,7 +612,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div data-target="painter-4" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-4" class="italy__left-painter">
                                 <img src="img/boltraffio.jpeg" class="accordion__tab-img" alt="Изоображение Больтраффио, Джованни">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -600,7 +626,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div data-target="painter-5" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-5" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -614,7 +640,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-6" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-6" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -628,7 +654,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-7" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-7" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -642,7 +668,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-8" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-8" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -656,7 +682,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-9" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-9" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -670,7 +696,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-10" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-10" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -684,7 +710,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-11" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-11" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -698,21 +724,21 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-12" class="italy__left-painter-active italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-12" class="italy__left-painter-active italy__left-painter">
                                 <img src="img/Domeniko_grenlandayo.jpg" class="accordion__tab-img" alt="Изоображение Доменико Гирландайо">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
                                         Доменико Гирландайо
                                     </h3>
                                     <span class="accordion__tab_life-time">
-                                        2 июня 1448 - 11 января 1494
+                                        2 июня 1448 -- 11 января 1494
                                     </span>
                                     <p class="italy__left-painter-text_descr grinlandayo_descr">
                                         Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
                                     </p>
                                 </div>
                             </div>
-                            <div data-target="painter-13" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-13" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -726,7 +752,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-14" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-14" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -740,7 +766,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-15" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-15" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -754,7 +780,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-16" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-16" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -768,7 +794,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-17" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-17" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -782,7 +808,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-18" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-18" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -796,7 +822,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-19" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-19" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -810,7 +836,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-20" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-20" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -824,7 +850,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-21" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-21" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -838,7 +864,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-22" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-22" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -852,7 +878,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-23" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-23" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -866,7 +892,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div data-target="painter-24" class="italy__left-painter">
+                            <div aria-label="Информация о художнике" data-target="painter-24" class="italy__left-painter">
                                 <img src="img/catalog-dont-know.png" class="accordion__tab-img" alt="Изоображение неизвостно">
                                 <div class="italy__left-painter_text">
                                     <h3 class="accordion__tab-h3">
@@ -883,7 +909,7 @@
                         </div>
                         <div class="italy__content-right">
                             <ul id="accordion" class="italy__accordion-list">
-                                <li class="italy__accordion-item ui-state-active">
+                                <li aria-label="Художники 15-го века" class="italy__accordion-item">
                                     <div tabindex="0" id="ui-id-1" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1400 по 1499 гг.
@@ -895,122 +921,122 @@
                                     </div>
                                     <div class="italy__accordion-bottom">
                                         <ul class="accordion__people-list">
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a href="#tabs__content" data-path="painter-1" class="accordion__painter-name">
                                                     Бенедетто ди Биндо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-2" class="accordion__painter-name">
                                                     Бергоньоне, Амброджо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-3" class="accordion__painter-name">
                                                     Биссоло, Франческо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-4" class="accordion__painter-name">
                                                     Больтраффио, Джованни
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-5" class="accordion__painter-name">
                                                     Бонсиньори, Франческо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-6" class="accordion__painter-name">
                                                     Боттичини, Рафаэлло
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-7" class="accordion__painter-name">
                                                     Брамантино
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-8" class="accordion__painter-name">
                                                     Бреа, Людовико
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-9" class="accordion__painter-name">
                                                     Бьяджо д’Антонио Туччи
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-10" class="accordion__painter-name">
                                                     Веккьетта
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-11" class="accordion__painter-name">
                                                     Андреа Верроккьо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-12" class="accordion__painter-name-active accordion__painter-name">
                                                     Доменико Гирландайо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-13" class="accordion__painter-name">
                                                     Беноццо Гоццоли
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-14" class="accordion__painter-name">
                                                     Граначчи, Франческо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-15" class="accordion__painter-name">
                                                     Грегорио ди Чекко
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-16" class="accordion__painter-name">
                                                     Джованни да Удине
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-17" class="accordion__painter-name">
                                                     Джованни ди Паоло
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-18" class="accordion__painter-name">
                                                     Джорджоне
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-19" class="accordion__painter-name">
                                                     Парентино, Бернардо
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-20" class="accordion__painter-name">
                                                     Пезеллино
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-21" class="accordion__painter-name">
                                                     Пьетро Перуджино
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-22" class="accordion__painter-name">
                                                     Перуцци, Бальдассаре
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-23" class="accordion__painter-name">
                                                     Пизанелло
                                                 </a>
                                             </li>
-                                            <li class="accordion__people">
+                                            <li aria-label="Имя художника" class="accordion__people">
                                                 <a data-path="painter-24" class="accordion__painter-name">
                                                     Пинтуриккьо
                                                 </a>
@@ -1018,7 +1044,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 16-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1500 по 1599 гг.
@@ -1046,7 +1072,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 17-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1600 по 1699 гг.
@@ -1074,7 +1100,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 18-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1700 по 1799 гг.
@@ -1102,7 +1128,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 19-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1800 по 1899 гг.
@@ -1130,7 +1156,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 20-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 1900 по 1999 гг.
@@ -1158,7 +1184,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="italy__accordion-item">
+                                <li aria-label="Художники 14-го век" class="italy__accordion-item">
                                     <div tabindex="0" class="italy__accordion-top">
                                         <h3 class="accordion-title">
                                             C 2000 г.
@@ -1206,136 +1232,147 @@
                     </button>
                     <div class="events__swiper-wrapper swiper-wrapper">
                         <div tabindex="0" class="swiper-slide events__swiper-slide">
-                            <picture>
-                                <source srcset="img/events-1.jpg" media="(max-width: 1920px)">
-                                <source srcset="img/events-1-1024.jpg" media="(max-width: 1024px)">
-                                <source srcset="img/events-1-768.jpg" media="(max-width: 768px)">
-                                <source srcset="img/events-1-320.jpg" media="(max-width: 576px)">
-                                <img class="events__slide-img" src="img/events-1.jpg" alt="events-slide">
-                            </picture>
-                            <div class="events__swiper-slide_text">
-                                <div class="events__swiper-slide_text-content">
-                                    <span class="events__swiper-slide_name-time">
-                                        Музей им. Щусева<br>
-                                        с 20 марта по 30 апреля
-                                    </span>
-                                    <h3 class="events__swiper-slide_title">
-                                        Книжная гравюра в живом восприятии
-                                    </h3>
-                                    <p class="events__swiper-slide_descr">
-                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
-                                    </p>
+                            <div class="events__swiper-slide-content">
+                                <picture>
+                                    <source srcset="img/events-1.jpg" media="(max-width: 1920px)">
+                                    <source srcset="img/events-1-1024.jpg" media="(max-width: 1024px)">
+                                    <source srcset="img/events-1-768.jpg" media="(max-width: 768px)">
+                                    <source srcset="img/events-1-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-1.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Музей им. Щусева<br>
+                                            с 20 марта по 30 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Книжная гравюра в живом восприятии
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Один из ведущих флорентийских&nbsp;художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
                                 </div>
-                                <a href="#" class="events__swiper-slide_link">
-                                    Подробнее
-                                </a>
                             </div>
                         </div>
                         <div tabindex="0" class="swiper-slide events__swiper-slide">
-                            <picture>
-                                <source srcset="img/events-2.jpg" media="(max-width: 1920px)">
-                                <source srcset="img/events-2-1024.jpg" media="(max-width: 1024px)">
-                                <source srcset="img/events-2-768.jpg" media="(max-width: 768px)">
-                                <source srcset="img/events-2-320.jpg" media="(max-width: 576px)">
-                                <img class="events__slide-img" src="img/events-2.jpg" alt="events-slide">
-                            </picture>
-                            <div class="events__swiper-slide_text">
-                                <div class="events__swiper-slide_text-content">
-                                    <span class="events__swiper-slide_name-time">
-                                        ММОМА<br>
-                                        24 марта 19:00
-                                    </span>
-                                    <h3 class="events__swiper-slide_title">
-                                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                                    </h3>
-                                    <p class="events__swiper-slide_descr">
-                                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
-                                    </p>
+                            <div class="events__swiper-slide-content">
+                                <picture>
+                                    <source srcset="img/events-2.jpg" media="(max-width: 1920px)">
+                                    <source srcset="img/events-2-1024.jpg" media="(max-width: 1024px)">
+                                    <source srcset="img/events-2-768.jpg" media="(max-width: 768px)">
+                                    <source srcset="img/events-2-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-2.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            ММОМА<br>
+                                            24 марта 19:00
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            «Открытая дискуссия». Дмитрий Петров и&nbsp;Сергей Ильин.
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
                                 </div>
-                                <a href="#" class="events__swiper-slide_link">
-                                    Подробнее
-                                </a>
                             </div>
                         </div>
                         <div tabindex="0" class="swiper-slide events__swiper-slide">
-                            <picture>
-                                <source srcset="img/events-3.jpg" media="(max-width: 1920px)">
-                                <source srcset="img/events-3-1024.jpg" media="(max-width: 1024px)">
-                                <source srcset="img/events-3-768.jpg" media="(max-width: 768px)">
-                                <source srcset="img/events-3-320.jpg" media="(max-width: 576px)">
-                                <img class="events__slide-img" src="img/events-3.jpg" alt="events-slide">
-                            </picture>
-                            <div class="events__swiper-slide_text">
-                                <div class="events__swiper-slide_text-content">
-                                    <span class="events__swiper-slide_name-time">
-                                        Еврейский музей<br>
-                                        с 31 марта по 21 апреля
-                                    </span>
-                                    <h3 class="events__swiper-slide_title">
-                                        Выставка «Формация 2020»
-                                    </h3>
-                                    <p class="events__swiper-slide_descr">
-                                        Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных&nbsp;рассуждений.
-                                    </p>
+                            <div class="events__swiper-slide-content">
+                                <picture>
+                                    <source srcset="img/events-3.jpg" media="(max-width: 1920px)">
+                                    <source srcset="img/events-3-1024.jpg" media="(max-width: 1024px)">
+                                    <source srcset="img/events-3-768.jpg" media="(max-width: 768px)">
+                                    <source srcset="img/events-3-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-3.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Еврейский музей<br>
+                                            с 31 марта по 21 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Выставка «Формация 2020»
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
                                 </div>
-                                <a href="#" class="events__swiper-slide_link">
-                                    Подробнее
-                                </a>
                             </div>
                         </div>
                         <div tabindex="0" class="swiper-slide events__swiper-slide">
-                            <picture>
-                                <source srcset="img/events-4.jpg" media="(max-width: 1920px)">
-                                <source srcset="img/events-4-1024.jpg" media="(max-width: 1024px)">
-                                <source srcset="img/events-4-768.jpg" media="(max-width: 768px)">
-                                <source srcset="img/events-4-320.jpg" media="(max-width: 576px)">
-                                <img class="events__slide-img" src="img/events-4.jpg" alt="events-slide">
-                            </picture>
-                            <div class="events__swiper-slide_text">
-                                <div class="events__swiper-slide_text-content">
-                                    <span class="events__swiper-slide_name-time">
-                                        Третьяковка на Крымском валу<br>
-                                        с 30 марта по 30 апреля
-                                    </span>
-                                    <h3 class="events__swiper-slide_title">
-                                        XXIV Международная биеннале молодого искусства
-                                    </h3>
-                                    <p class="events__swiper-slide_descr">
-                                        Внезапно, реплицированные с зарубежных источников, современные исследования.
-                                    </p>
+                            <div class="events__swiper-slide-content">
+                                <picture>
+                                    <source srcset="img/events-4.jpg" media="(max-width: 1920px)">
+                                    <source srcset="img/events-4-1024.jpg" media="(max-width: 1024px)">
+                                    <source srcset="img/events-4-768.jpg" media="(max-width: 768px)">
+                                    <source srcset="img/events-4-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-4.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            Третьяковка на Крымском валу<br>
+                                            с 30 марта по 30 апреля
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            XXIV Международная биеннале молодого искусства
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Внезапно, реплицированные с зарубежных источников, современные исследования.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
                                 </div>
-                                <a href="#" class="events__swiper-slide_link">
-                                    Подробнее
-                                </a>
                             </div>
                         </div>
                         <div tabindex="0" class="swiper-slide events__swiper-slide">
-                            <picture>
-                                <source srcset="img/events-5.jpg" media="(max-width: 1920px)">
-                                <source srcset="img/events-5-1024.jpg" media="(max-width: 1024px)">
-                                <source srcset="img/events-5-768.jpg" media="(max-width: 768px)">
-                                <source srcset="img/events-5-320.jpg" media="(max-width: 576px)">
-                                <img class="events__slide-img" src="img/events-5.jpg" alt="events-slide">
-                            </picture>
-                            <div class="events__swiper-slide_text">
-                                <div class="events__swiper-slide_text-content">
-                                    <span class="events__swiper-slide_name-time">
-                                        ММАМ<br>
-                                        с 8 апреля по 20 мая
-                                    </span>
-                                    <h3 class="events__swiper-slide_title">
-                                        Джон Винзор. Фотографии из серии «Метафора серебра»
-                                    </h3>
-                                    <p class="events__swiper-slide_descr">
-                                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
-                                    </p>
+                            <div class="events__swiper-slide-content">
+                                <picture>
+                                    <source srcset="img/events-5.jpg" media="(max-width: 1920px)">
+                                    <source srcset="img/events-5-1024.jpg" media="(max-width: 1024px)">
+                                    <source srcset="img/events-5-768.jpg" media="(max-width: 768px)">
+                                    <source srcset="img/events-5-320.jpg" media="(max-width: 576px)">
+                                    <img class="events__slide-img" src="img/events-5.jpg" alt="events-slide">
+                                </picture>
+                                <div class="events__swiper-slide_text">
+                                    <div class="events__swiper-slide_text-content">
+                                        <span class="events__swiper-slide_name-time">
+                                            ММАМ<br>
+                                            с 8 апреля по 20 мая
+                                        </span>
+                                        <h3 class="events__swiper-slide_title">
+                                            Джон Винзор. Фотографии из серии «Метафора серебра»
+                                        </h3>
+                                        <p class="events__swiper-slide_descr">
+                                            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="events__swiper-slide_link">
+                                        Подробнее
+                                    </a>
                                 </div>
-                                <a href="#" class="events__swiper-slide_link">
-                                    Подробнее
-                                </a>
                             </div>
                         </div>
                     </div>
+                    <div class="events__swiper-bullet-pag swiper-bullet-pagination"></div>
                 </div>
             </div>
         </section>
@@ -1345,7 +1382,7 @@
                     Проекты
                 </h2>
                 <p class="projects__descr">
-                    Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip">i</span><span class="projects__tooltip-text">Пример современных тенденций - современная методология разработки</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip">i</span><span class="projects__tooltip-text">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span> исключительно в&nbsp;разрезе&nbsp;маркетинговых и&nbsp;финансовых <span class="projects__tooltip">i</span><span class="projects__tooltip-text">В стремлении повысить качество</span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных&nbsp;социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными&nbsp;данными&nbsp;до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="to_gallery">blanchard-art.ru/projects</a>
+                    Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-&nbsp;за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip">i</span><span class="projects__tooltip-text">Пример современных тенденций - современная методология разработки</span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip">i</span><span class="projects__tooltip-text">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span> исключительно в&nbsp;разрезе&nbsp;маркетинговых и&nbsp;финансовых&nbsp;<span class="projects__tooltip">i</span><span class="projects__tooltip-text">В стремлении повысить качество</span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными&nbsp;данными&nbsp;до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#" class="to_gallery">blanchard-art.ru/projects</a>
                 </p>
                 <h3 class="projects__partners_h3">
                     Партнеры проектов
@@ -1429,7 +1466,7 @@
                                 <li class="contacts__form-item">
                                     <input required id="contacts__input-tel" data-validate-field="tel" type="tel" placeholder="Телефон*" class="contacts__input">
                                 </li>
-                                <li class="contacts__form-item">
+                                <li class="contacts__form-item contacts__form-btn-item">
                                     <button class="contacts__form_btn">
                                         Заказать обратный звонок
                                     </button>

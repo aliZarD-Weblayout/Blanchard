@@ -40,12 +40,43 @@ const simpleBar = new SimpleBar(document.querySelector(".header__bottom--dropdow
   scrollbarMaxSize: 80,
 });
 
+const headerBurger = document.querySelector('#burger')
+
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('#burger').addEventListener('click', function() {
-        document.querySelector('#burger-menu').classList.toggle('header__burger-active')
+        document.querySelector('#burger-menu').classList.add('header__burger-active')
+
+    })
+    document.querySelector('#burger__close').addEventListener('click', function() {
+      document.querySelector('#burger-menu').classList.remove('header__burger-active')
+    })
+
+    headerBurger.addEventListener('click', function() {
+      document.querySelector('#body').classList.add("lock");
+    })
+    document.querySelector('#burger__close').addEventListener('click', function() {
+      document.querySelector('#body').classList.remove('lock')
     })
 })
 
+let burgerHidden = document.querySelector("#burger-menu")
+burgerHidden.ariaHidden = !burgerHidden.ariaHidden;
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector('#search').addEventListener('click', function() {
+      document.querySelector('#search-menu').classList.add('search-menu-active')
+      document.querySelector('#search').classList.add('search-menu-active-btn')
+
+  })
+  document.querySelector('#search-close').addEventListener('click', function() {
+    document.querySelector('#search-menu').classList.remove('search-menu-active')
+    document.querySelector('#search').classList.remove('search-menu-active-btn')
+  })
+
+})
+
+let searchHidden = document.querySelector("#search-menu")
+searchHidden.ariaHidden = !searchHidden.ariaHidden;
 
 // HERO
 
@@ -60,14 +91,12 @@ const heroSwiper = new Swiper('#hero__swiper', {
   a11y: {
       containerRoleDescriptionMessage: "Слайдер Художественная галерея",
       paginationBulletMessage: "Переключить слайд на номер {{index}}",
-      containerRoleDescriptionMessage: String,
-      enabled: Boolean,
+      enabled: "Слайд на данный момент",
       paginationBulletMessage: String,
-      prevSlideMessage: String,
-      itemRoleDescriptionMessage: String,
-      lastSlideMessage: String,
-      nextSlideMessage: String,
-      slideRole: String,
+      itemRoleDescriptionMessage: "Слайд",
+      lastSlideMessage: "Последний слайд",
+      nextSlideMessage: "Следующий слайд",
+      slideRole: "Слайд главного слайдера сайта",
     },
 });
 
@@ -88,9 +117,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 let gallerySlider = new Swiper(".swiper-right--content", {
-slidesPerView: 3,
-  spaceBetween: 30,
-  slidesPerGroup: 3,
   navigation: {
     nextEl: ".swiper-btn--next",
     prevEl: ".swiper-btn--prev"
@@ -100,25 +126,28 @@ slidesPerView: 3,
     el: ".swiper-pagination--right",
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
     },
 
     576: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 30
     },
 
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0
+    },
   },
 
 a11y: {
-  prevSlideMessage: 'Предыдущий',
-  nextSlideMessage: 'Следующий',
+  prevSlideMessage: 'Предыдущая картина',
+  nextSlideMessage: 'Следующая картина',
 }
 })
 
@@ -194,55 +223,79 @@ catalogPainterTab.addEventListener("click", function() {
 
 // EVENTS
 const eventsSlider = new Swiper('.events__swiper', {
-slidesPerView: 3,
-spaceBetween: 39,
-navigation: {
-  nextEl: ".events-swiper-btn--next",
-  prevEl: ".events-swiper-btn--prev"
-},
-breakpoints: {
-  320: {
-    slidesPerView: 1,
-    spaceBetween: 0
+  slidesPerView: 3,
+  spaceBetween: 39,
+  navigation: {
+    nextEl: ".events-swiper-btn--next",
+    prevEl: ".events-swiper-btn--prev"
   },
-  576: {
-    slidesPerView: 2,
-    spaceBetween: 20
+  pagination: {
+    type: "bullets",
+    el: ".events__swiper-bullet-pag",
+    clickable: true,
   },
 
-  1200: {
-    slidesPerView: 3,
-    spaceBetween: 39
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+    },
+
+    576: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30
+    },
+
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0
+    },
+  },
+  a11y: {
+    prevSlideMessage: 'Предыдущее событие',
+    nextSlideMessage: 'Следующее событие',
   }
-},
 })
 
 // projects
 
 const partnersSlider = new Swiper('.partners__swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 40,
-  slidesPerGroup: 3,
   navigation: {
     nextEl: ".partners__next-btn",
     prevEl: ".partners__prev-btn"
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 40
     },
 
     576: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 30
     },
 
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0
+    },
   },
+  a11y: {
+    prevSlideMessage: 'Предыдущий партнер',
+    nextSlideMessage: 'Следующий партнер',
+  }
 })
 
 // contacts
@@ -287,10 +340,10 @@ new window.JustValidate("#contacts__form", {
   function init(){
       var myMap = new ymaps.Map("map", {
           center: [55.76, 37.64],
-          zoom: 13
+          zoom: 12,
       });
 
-      var PlaceMark = new ymaps.Placemark([55.70, 37.51], {}, {
+      var PlaceMark = new ymaps.Placemark([55.80, 37.51], {}, {
           iconLayout: 'default#image',
           iconImageHref: 'js/metka.svg',
           iconImageSize:  [20, 60],
@@ -298,4 +351,5 @@ new window.JustValidate("#contacts__form", {
     });
 
     myMap.geoObjects.add(PlaceMark);
-  }
+    myMap.controls.remove(zoomControl);
+      }
