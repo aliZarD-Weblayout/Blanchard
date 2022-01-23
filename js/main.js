@@ -84,7 +84,7 @@ const heroSwiper = new Swiper('#hero__swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
   autoplay: {
-    delay: 8000,
+    delay: 14000,
   },
   effect: 'fade',
   loop: true,
@@ -184,7 +184,7 @@ $( function() {
      icons: false,
      heightStyle: "content",
      collapsible: true,
-     active: false
+     active: 0
    });
 } );
 
@@ -236,13 +236,13 @@ const eventsSlider = new Swiper('.events__swiper', {
   },
 
   breakpoints: {
-    992: {
+    993: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 52,
       slidesPerGroup: 3,
     },
 
-    576: {
+    575: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 30
@@ -277,7 +277,7 @@ const partnersSlider = new Swiper('.partners__swiper-container', {
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-      spaceBetween: 40
+      spaceBetween: 47
     },
 
     576: {
@@ -324,7 +324,11 @@ new window.JustValidate("#contacts__form", {
     },
 
    messages: {
-         name: "Как вас зовут?",
+         name: { 
+          required:"Как вас зовут?",
+          minLenght: "Не достаточно количество символов",
+          maxLenght: "Слишком длинное имя"
+        },
          tel: {
            required: "Укажите ваш телефон",
            function: "Не достаточно количество символов"
@@ -343,7 +347,7 @@ new window.JustValidate("#contacts__form", {
           zoom: 12,
       });
 
-      var PlaceMark = new ymaps.Placemark([55.80, 37.51], {}, {
+      var PlaceMark = new ymaps.Placemark([55.756, 37.63], {}, {
           iconLayout: 'default#image',
           iconImageHref: 'js/metka.svg',
           iconImageSize:  [20, 60],
@@ -353,3 +357,27 @@ new window.JustValidate("#contacts__form", {
     myMap.geoObjects.add(PlaceMark);
     myMap.controls.remove(zoomControl);
       }
+
+
+
+
+
+
+//320
+const anchor = document.querySelectorAll('.accordion__painter-name')
+
+for (let anchor of anchors) {
+
+  anchor.addEventListener('click', function(event) {
+
+    event.preventDefault();
+
+    if(document.documentElement.clientWidth >= 992) return;
+    
+    const blockID = anchor.getAttribute('href')
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
