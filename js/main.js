@@ -319,7 +319,10 @@ new window.JustValidate("#contacts__form", {
       name: {
         required: true,
         minLenght: 2,
-        maxLenght: 20
+        maxLenght: 20,
+        function: (name, value) => {
+          
+        }
       },
 
       tel: {
