@@ -298,6 +298,14 @@ const partnersSlider = new Swiper('.partners__swiper-container', {
   }
 })
 
+
+tippy('.tooltip-btn', {
+  trigger: 'click',
+  duration: [400],
+  theme: 'myTheme',
+  arrow: true
+});
+
 // contacts
 
 let tel = document.querySelector("#contacts__input-tel")
@@ -364,20 +372,17 @@ new window.JustValidate("#contacts__form", {
 
 
 //320
-const anchor = document.querySelectorAll('.accordion__painter-name')
+let artTabs = document.querySelectorAll('.accordion__painter-name')
 
-for (let anchor of anchors) {
+if (document.documentElement.clientWidth <= 992) {
+  artTabs.forEach(function(catalogTab) {
+    catalogTab.addEventListener('click',()=>{
+      let activeCatalog = document.querySelectorAll('#italy__left-painter');
 
-  anchor.addEventListener('click', function(event) {
-
-    event.preventDefault();
-
-    if(document.documentElement.clientWidth >= 992) return;
-    
-    const blockID = anchor.getAttribute('href')
-    document.querySelector(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+      activeCatalog.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+      });
+    }) ;
+  });
+};
