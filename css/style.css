@@ -386,8 +386,7 @@ html {
     border-top: 1px solid;
     border-right: 1px solid;
     left: 100%;
-    margin-top: 9px;
-    margin-bottom: 3px;
+    top: 9px;
     transform: rotate(135deg);
     transition: all .3s ease-in-out;
 }
