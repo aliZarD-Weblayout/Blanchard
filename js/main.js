@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".header__bottom-btn").forEach(item => {
   item.addEventListener("click", function() {
     let btn = this;
-    let dropdown = this.parentElement.querySelector(".header__bottom--dropdown");
+    let dropdown = this.parentElement.querySelector(".header__bottom-dropdown");
     
     document.querySelectorAll(".header__bottom-btn").forEach(el => {
       if (el != btn) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     
-    document.querySelectorAll(".header__bottom--dropdown").forEach(el => {
+    document.querySelectorAll(".header__bottom-dropdown").forEach(el => {
       if (el != dropdown) {
         el.classList.remove("active-dropdown--list");
       }
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("click", function(e) {
   let target = e.target;
   if (!target.closest(".header__bottom-list")) {
-    document.querySelectorAll(".header__bottom--dropdown").forEach(el => {
+    document.querySelectorAll(".header__bottom-dropdown").forEach(el => {
         el.classList.remove("active-dropdown--list");
     })
      document.querySelectorAll(".header__bottom-btn").forEach(el => {
@@ -35,7 +35,7 @@ document.addEventListener("click", function(e) {
 })
 })
 
-const simpleBar = new SimpleBar(document.querySelector(".header__bottom--dropdown-wrapper"), {
+const simpleBar = new SimpleBar(document.querySelector(".header__bottom-dropdown-wrapper"), {
   autoHide: false,
   scrollbarMaxSize: 80,
 });
@@ -116,14 +116,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-let gallerySlider = new Swiper(".swiper-right--content", {
+let gallerySlider = new Swiper(".gallery__swiper-right-content", {
   navigation: {
-    nextEl: ".swiper-btn--next",
-    prevEl: ".swiper-btn--prev"
+    nextEl: ".gallery__swiper-btn-next",
+    prevEl: ".gallery__swiper-btn-prev"
   },
   pagination: {
     type: "fraction",
-    el: ".swiper-pagination--right",
+    el: ".gallery__swiper-pagination-right",
   },
   breakpoints: {
     1400: {
@@ -193,29 +193,29 @@ $( function() {
 // PAINTER-TAB
 
 document.addEventListener('DOMContentLoaded', function() {
-document.querySelectorAll('.accordion__painter-name').forEach(function(painterTabs) {
+document.querySelectorAll('.catalog__painter-name').forEach(function(painterTabs) {
     painterTabs.addEventListener('click', function(eventPainter) {
         const path = eventPainter.currentTarget.dataset.path
 
-        document.querySelectorAll('.italy__left-painter').forEach(function(PainterTabContent) {
-            PainterTabContent.classList.remove('italy__left-painter-active')
+        document.querySelectorAll('.catalog__left-painter').forEach(function(PainterTabContent) {
+            PainterTabContent.classList.remove('catalog__left-painter-active')
         })
-        document.querySelector(`[data-target="${path}"]`).classList.toggle('italy__left-painter-active')
+        document.querySelector(`[data-target="${path}"]`).classList.toggle('catalog__left-painter-active')
     })
 })
 })
 
-const catalogPainter = document.querySelectorAll(".accordion__painter-name")
+const catalogPainter = document.querySelectorAll(".catalog__painter-name")
 
 catalogPainter.forEach(function(catalogPainterTab) {
 catalogPainterTab.addEventListener("click", function() {
   let currentCatalogPainter = catalogPainterTab
 
   catalogPainter.forEach(function(catalogPainterTab) {
-    catalogPainterTab.classList.remove('accordion__painter-name-active')
+    catalogPainterTab.classList.remove('catalog__painter-name-active')
   })
 
-  currentCatalogPainter.classList.add('accordion__painter-name-active')
+  currentCatalogPainter.classList.add('catalog__painter-name-active')
 })
 })
 
@@ -226,8 +226,8 @@ const eventsSlider = new Swiper('.events__swiper', {
   slidesPerView: 3,
   spaceBetween: 39,
   navigation: {
-    nextEl: ".events-swiper-btn--next",
-    prevEl: ".events-swiper-btn--prev"
+    nextEl: ".events__swiper-btn-next",
+    prevEl: ".events__swiper-btn-prev"
   },
   pagination: {
     type: "bullets",
@@ -239,7 +239,7 @@ const eventsSlider = new Swiper('.events__swiper', {
     993: {
       slidesPerView: 3,
       spaceBetween: 52,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
     },
 
     575: {
@@ -313,6 +313,9 @@ let tel = document.querySelector("#contacts__input-tel")
 var im = new Inputmask("+7 (999) 999-99-99")
 
 im.mask(tel);
+
+const contactsMatch = new RegExp('^[а-яА-Я]*$');
+
 new window.JustValidate("#contacts__form", {
 
     rules: {
@@ -321,7 +324,7 @@ new window.JustValidate("#contacts__form", {
         minLenght: 2,
         maxLenght: 20,
         function: (name, value) => {
-          
+          return contactsMatch.test(value)
         }
       },
 
@@ -338,7 +341,8 @@ new window.JustValidate("#contacts__form", {
          name: { 
           required:"Как вас зовут?",
           minLenght: "Не достаточно количество символов",
-          maxLenght: "Слишком длинное имя"
+          maxLenght: "Слишком длинное имя",
+          function: "Не корректные символы"
         },
          tel: {
            required: "Укажите ваш телефон",
@@ -366,7 +370,6 @@ new window.JustValidate("#contacts__form", {
     });
 
     myMap.geoObjects.add(PlaceMark);
-    myMap.controls.remove(zoomControl);
       }
 
 
@@ -375,12 +378,12 @@ new window.JustValidate("#contacts__form", {
 
 
 //320
-let artTabs = document.querySelectorAll('.accordion__painter-name')
+let artTabs = document.querySelectorAll('.catalog__painter-name')
 
 if (document.documentElement.clientWidth <= 992) {
   artTabs.forEach(function(catalogTab) {
     catalogTab.addEventListener('click',()=>{
-      let activeCatalog = document.querySelectorAll('#italy__left-painter');
+      let activeCatalog = document.querySelectorAll('#catalog__left-painter');
 
       activeCatalog.scrollIntoView({
         block: "start",
