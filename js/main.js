@@ -146,6 +146,7 @@ let gallerySlider = new Swiper(".gallery__swiper-right-content", {
   },
 
 a11y: {
+  itemRoleDescriptionMessage: "Слайд",
   prevSlideMessage: 'Предыдущая картина',
   nextSlideMessage: 'Следующая картина',
 }
@@ -255,6 +256,7 @@ const eventsSlider = new Swiper('.events__swiper', {
     },
   },
   a11y: {
+    itemRoleDescriptionMessage: "Слайд",
     prevSlideMessage: 'Предыдущее событие',
     nextSlideMessage: 'Следующее событие',
   }
@@ -293,6 +295,7 @@ const partnersSlider = new Swiper('.partners__swiper-container', {
     },
   },
   a11y: {
+    itemRoleDescriptionMessage: "Слайд",
     prevSlideMessage: 'Предыдущий партнер',
     nextSlideMessage: 'Следующий партнер',
   }
@@ -314,7 +317,7 @@ var im = new Inputmask("+7 (999) 999-99-99")
 
 im.mask(tel);
 
-const contactsMatch = new RegExp('^[а-яА-Я]*$');
+const contactsMatch = new RegExp('^[а-яА-Яa-zA-Z]*$');
 
 new window.JustValidate("#contacts__form", {
 
@@ -380,7 +383,20 @@ new window.JustValidate("#contacts__form", {
 //320
 let artTabs = document.querySelectorAll('.catalog__painter-name')
 
-if (document.documentElement.clientWidth <= 992) {
+// if (document.documentElement.clientWidth <= 992) {
+//   artTabs.forEach(function(catalogTab) {
+//     catalogTab.addEventListener('click',()=>{
+//       let activeCatalog = document.querySelectorAll('#catalog__left-painter');
+
+//       activeCatalog.scrollIntoView({
+//         block: "start",
+//         behavior: "smooth"
+//       });
+//     }) ;
+//   });
+// };
+
+if (window.innerWidth <= 768) {
   artTabs.forEach(function(catalogTab) {
     catalogTab.addEventListener('click',()=>{
       let activeCatalog = document.querySelectorAll('#catalog__left-painter');
@@ -391,4 +407,4 @@ if (document.documentElement.clientWidth <= 992) {
       });
     }) ;
   });
-};
+}
