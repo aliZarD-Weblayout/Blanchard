@@ -2946,6 +2946,10 @@ html {
     padding-right: 50px;
   }
 
+  .header__search-btn {
+    margin-right: 10px;
+  }
+
   .header__left-logo-link {
     display: none;
   }
@@ -3151,7 +3155,6 @@ html {
 
   .swiper-slide.events__swiper-slide {
     margin-bottom: 30px;
-    width: 290px !important;
   }
 
   .events__container {
@@ -3163,7 +3166,8 @@ html {
   }
 
   .events__swiper-slide-text {
-    margin-top: 24px;
+    border-top: 0;
+    margin-top: 17px;
   }
 
   .events__swiper-slide-descr {
@@ -3241,9 +3245,6 @@ html {
   .contacts__form-btn {
     padding-left: 42px;
     padding-right: 38.6px;
-    margin-top: 4px;
-    padding-top: 12.5px;
-    padding-bottom: 9.5px;
   }
 
   .ymaps-2-1-79-map.ymaps-2-1-79-i-ua_js_yes.ymaps-2-1-79-map-bg.ymaps-2-1-79-islets_map-lang-ru {
@@ -3360,6 +3361,9 @@ html {
 
   .gallery__modal-text-content {
     padding-bottom: 82px;
+  }
+  .choices__list--dropdown {
+    background-color: #000;
   }
 
 
@@ -3761,7 +3765,7 @@ html {
     margin-bottom: 31px;
   }
 
-  .choices__list.choices__list--dropdown {
+  .choices__list--dropdown {
     background: #000;
     left: -1px;
   }
