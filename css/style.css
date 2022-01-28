@@ -2314,7 +2314,7 @@ html {
 
 .events__swiper-slide-link {
   font-size: 16px;
-  line-height: 32px;
+  line-height: 189%;
   color: #9D5CD0;
   width: 88px;
   border-bottom: 1px solid #9D5CD0;
@@ -3142,15 +3142,16 @@ html {
   }
 
   .events__swiper-slide-text {
-    min-height: 485px;
-    padding-top: 5.5%;
-    padding-bottom: 16.3%;
-    padding-left: 10.7%;
-    padding-right: 11%;
+    min-height: 482px;
+    padding-top: 4.5%;
+    padding-bottom: 13%;
+    padding-left: 11.2%;
+    padding-right: 11.2%;
   }
 
   .swiper-slide.events__swiper-slide {
     margin-bottom: 30px;
+    width: 290px !important;
   }
 
   .events__container {
@@ -3162,11 +3163,11 @@ html {
   }
 
   .events__swiper-slide-text {
-    margin-top: 23px;
+    margin-top: 24px;
   }
 
   .events__swiper-slide-descr {
-    line-height: 31.5px;
+    line-height: 32px;
   }
 
   .swiper-pagination-bullet {
@@ -3179,7 +3180,7 @@ html {
   }
 
   .events__swiper-slide-text-content {
-    margin-bottom: 23px;
+    margin-bottom: 0;
   }
 
   .events__swiper-slide-name-time {
@@ -3197,7 +3198,8 @@ html {
   }
 
   .events__swiper-slide-title {
-    line-height: 32px;
+    line-height: 33px;
+    margin-bottom: 5px;
   }
 
 
@@ -3217,7 +3219,8 @@ html {
   }
 
   .partners__swiper-slide-img {
-    max-width: 200px;
+    max-width: 70%;
+    max-height: 41%;
   }
 
   .partners__swiper-container {
@@ -3231,11 +3234,16 @@ html {
 
   .contacts__input {
     width: 270px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .contacts__form-btn {
     padding-left: 42px;
     padding-right: 38.6px;
+    margin-top: 4px;
+    padding-top: 12.5px;
+    padding-bottom: 9.5px;
   }
 
   .ymaps-2-1-79-map.ymaps-2-1-79-i-ua_js_yes.ymaps-2-1-79-map-bg.ymaps-2-1-79-islets_map-lang-ru {
