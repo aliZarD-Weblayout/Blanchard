@@ -146,6 +146,7 @@ let gallerySlider = new Swiper(".gallery__swiper-right-content", {
   },
 
 a11y: {
+  itemRoleDescriptionMessage: "Слайд",
   prevSlideMessage: 'Предыдущая картина',
   nextSlideMessage: 'Следующая картина',
 }
@@ -238,8 +239,8 @@ const eventsSlider = new Swiper('.events__swiper', {
   breakpoints: {
     993: {
       slidesPerView: 3,
-      spaceBetween: 52,
-      slidesPerGroup: 1,
+      spaceBetween: 27,
+      slidesPerGroup: 3,
     },
 
     575: {
@@ -255,6 +256,7 @@ const eventsSlider = new Swiper('.events__swiper', {
     },
   },
   a11y: {
+    itemRoleDescriptionMessage: "Слайд",
     prevSlideMessage: 'Предыдущее событие',
     nextSlideMessage: 'Следующее событие',
   }
@@ -293,6 +295,7 @@ const partnersSlider = new Swiper('.partners__swiper-container', {
     },
   },
   a11y: {
+    itemRoleDescriptionMessage: "Слайд",
     prevSlideMessage: 'Предыдущий партнер',
     nextSlideMessage: 'Следующий партнер',
   }
@@ -314,7 +317,7 @@ var im = new Inputmask("+7 (999) 999-99-99")
 
 im.mask(tel);
 
-const contactsMatch = new RegExp('^[а-яА-Я]*$');
+const contactsMatch = new RegExp('^[а-яА-Яa-zA-Z]*$');
 
 new window.JustValidate("#contacts__form", {
 
@@ -370,6 +373,7 @@ new window.JustValidate("#contacts__form", {
     });
 
     myMap.geoObjects.add(PlaceMark);
+    myMap.behaviors.disable('scrollZoom');
       }
 
 
