@@ -239,8 +239,8 @@ const eventsSlider = new Swiper('.events__swiper', {
   breakpoints: {
     993: {
       slidesPerView: 3,
-      spaceBetween: 52,
-      slidesPerGroup: 1,
+      spaceBetween: 27,
+      slidesPerGroup: 3,
     },
 
     575: {
@@ -373,6 +373,7 @@ new window.JustValidate("#contacts__form", {
     });
 
     myMap.geoObjects.add(PlaceMark);
+    myMap.behaviors.disable('scrollZoom');
       }
 
 
@@ -383,20 +384,7 @@ new window.JustValidate("#contacts__form", {
 //320
 let artTabs = document.querySelectorAll('.catalog__painter-name')
 
-// if (document.documentElement.clientWidth <= 992) {
-//   artTabs.forEach(function(catalogTab) {
-//     catalogTab.addEventListener('click',()=>{
-//       let activeCatalog = document.querySelectorAll('#catalog__left-painter');
-
-//       activeCatalog.scrollIntoView({
-//         block: "start",
-//         behavior: "smooth"
-//       });
-//     }) ;
-//   });
-// };
-
-if (window.innerWidth <= 768) {
+if (document.documentElement.clientWidth <= 992) {
   artTabs.forEach(function(catalogTab) {
     catalogTab.addEventListener('click',()=>{
       let activeCatalog = document.querySelectorAll('#catalog__left-painter');
@@ -407,4 +395,4 @@ if (window.innerWidth <= 768) {
       });
     }) ;
   });
-}
+};
