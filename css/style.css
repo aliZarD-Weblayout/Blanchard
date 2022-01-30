@@ -262,8 +262,8 @@ button {
 }
 
 .header__container {
-  padding-top: 1.48%;
-  padding-bottom: 1.5%;
+  padding-top: 28.5px;
+  padding-bottom: 28.5px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -928,9 +928,9 @@ button {
   position: absolute;
   left: -239px;
   top: 12px;
-  -webkit-transform: translateX(-1000%);
-      -ms-transform: translateX(-1000%);
-          transform: translateX(-1000%);
+  -webkit-transform: translateX(-1400%);
+      -ms-transform: translateX(-1400%);
+          transform: translateX(-1400%);
   -webkit-transition: transform .3s ease-in-out;
   -o-transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
@@ -1513,6 +1513,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -1558,6 +1559,7 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+  margin: 0;
 }
 
 .gallery__modal-name {
@@ -2123,7 +2125,6 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #cacaca;
-  margin-top: -4px;
 }
 
 .events__swiper-slide-text-content {
@@ -2776,11 +2777,7 @@ button {
   }
 }
 
-@media (max-width: 1340px) {
-  .header__bottom {
-    display: none;
-  }
-
+@media (max-width: 1370px) {
   .header__left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2788,6 +2785,10 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .header__bottom-list-item:not(:last-child) {
+    margin-right: 13%;
   }
 
   .header__container {
@@ -2800,12 +2801,13 @@ button {
 
   .header__center {
     display: inline-block;
-    margin-left: auto;
-    padding-left: 6.3%;
+    margin-left: 4%;
+    margin-right: 7%;
   }
 
   .header__right {
     display: inline-block;
+    margin-right: 3%;
   }
 
 
@@ -2861,6 +2863,10 @@ button {
 
   .header__center-logo-link {
     display: block;
+  }
+
+  .header__bottom {
+    display: none;
   }
 
   .header__right-link {
@@ -3185,8 +3191,8 @@ button {
   }
   
   .events__swiper-slide-picture {
-    height: 222px;
-    margin-bottom: 4px;
+    min-height: 32%;
+    height: auto;
   }
 
   .events__swiper-slide-descr {
@@ -3262,8 +3268,8 @@ button {
   }
 
   .contacts__form-btn {
-    padding-left: 42px;
-    padding-right: 38.6px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .ymaps-2-1-79-map.ymaps-2-1-79-i-ua_js_yes.ymaps-2-1-79-map-bg.ymaps-2-1-79-islets_map-lang-ru {
@@ -3446,7 +3452,8 @@ button {
   }
 
   .events__swiper-slide-picture {
-    height: 200px;
+    min-height: 29.6%;
+    height: auto;
   }
 
   .swiper-pagination-bullet:first-child {
@@ -3530,7 +3537,7 @@ button {
   }
 
   .contacts__form-btn-item {
-    width: calc(50% - 15px);
+    width: 100%;
   }
 
 
@@ -3574,8 +3581,20 @@ button {
   }
 
   .header__container {
-    padding-top: 7px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .header__search-btn {
+    margin-right: 0;
+  }
+
+  .header__right {
+    margin: 0;
+  }
+
+  .header__left {
+    padding-top: 5px;
   }
 
   .header__center {
@@ -3633,7 +3652,8 @@ button {
   }
 
   .header__burger-nav {
-    margin-bottom: 340px;
+    margin-bottom: 0;
+    min-height: 92%;
   }
 
   .header__in-btn {
@@ -3650,9 +3670,10 @@ button {
   }
 
   .header__burger__close-btn {
-    width: 20px;
-    top: 12px;
-    height: 20px;
+    width: 18px;
+    top: 16px;
+    left: 16px;
+    height: 18px;
   }
 
 
@@ -3934,7 +3955,7 @@ button {
   }
 
   .swiper-slide.events__swiper-slide {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   .swiper-pagination-bullet:not(:last-child) {
