@@ -3181,14 +3181,14 @@ button {
 
   .events__swiper-slide-text {
     min-height: 482px;
-    padding-top: 4.5%;
-    padding-bottom: 13%;
+    padding-top: 5%;
+    padding-bottom: 14%;
     padding-left: 11.2%;
     padding-right: 11.2%;
   }
 
   .swiper-slide.events__swiper-slide {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   .events__container {
@@ -3204,12 +3204,16 @@ button {
   }
   
   .events__swiper-slide-picture {
-    min-height: 32%;
+    min-height: 29.6%;
     height: auto;
   }
 
-  .events__swiper-slide-descr {
-    line-height: 32px;
+  .events__swiper-slide-content {
+    margin-bottom: 20px;
+  }
+
+  .events__swiper-slide-descr:nth-child(3) {
+    line-height: 31.8px;
   }
 
   .swiper-pagination-bullet {
@@ -3242,6 +3246,10 @@ button {
   .events__swiper-slide-title {
     line-height: 33px;
     margin-bottom: 5px;
+  }
+
+  .events__swiper-slide-title-1 {
+    margin-bottom: 7px;
   }
 
 
