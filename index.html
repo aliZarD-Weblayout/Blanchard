@@ -16,124 +16,84 @@
   <header class="header" id="header">
     <div class="header__top">
       <div class="header__container container flex">
+        <button aria-label="Бургер" id="burger" class="header__burger-btn">
+          <!-- <span class="header__burger-span"></span> -->
+          <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+          </svg>                            
+        </button>
         <div class="header__left">
-          <div id="burger-menu" class="header__burger-menu">
-            <svg aria-label="Закрытие бургера" class="header__burger__close-btn" id="burger__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
-                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
-            </svg>                            
-            <nav aria-label="Навигация на сайте" class="header__burger-nav">
-              <ul class="header__burger-list flex">
-                <li class="header__burger-list-item">
-                  <a href="#about-us" class="header__center-link link-reset header__burger-link">
-                    О нас
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#gallery" class="header__center-link link-reset header__burger-link">
-                    Галерея
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#catalog" class="header__center-link link-reset header__burger-link">
-                    Каталог
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#events" class="header__center-link link-reset header__burger-link">
-                    События
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#publications" class="header__center-link link-reset header__burger-link">
-                    Издания
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#projects" class="header__center-link link-reset header__burger-link">
-                    Проекты
-                  </a>
-                </li>
-                <li class="header__burger-list-item">
-                  <a href="#contacts" class="header__center-link link-reset header__burger-link">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <a aria-label="Войти" class="header__in-btn link-reset">
-              <svg class="header__in-btn-svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
-              </svg>  
-              Войти       
-            </a>
-          </div>
-          <button aria-label="Бургер" id="burger" class="header__burger-btn">
-            <!-- <span class="header__burger-span"></span> -->
-            <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
-              <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
-              <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
-            </svg>                            
-          </button>
           <a aria-label="Логотип" href="#" class="link-reset header__left-logo-link">
             <img src="img/Blanchard-logo.png" alt="Logotip">
           </a>
         </div>
 
         <div class="header__center">
-          <a href="#" class="link-reset header__center-logo-link">
-            <img class="header__center-logotip" src="img/Blanchard-logo.png" alt="Logotip">
-          </a>
-          <nav aria-label="Навигация" class="header__nav">
-            <ul aria-label="Список навигаций" class="header__list flex">
-              <li class="header__list-item">
-                <a href="#about-us" class="header__center-link link-reset">
-                  О нас
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#gallery" class="header__center-link link-reset">
-                  Галерея
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#catalog" class="header__center-link link-reset">
-                  Каталог
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#events" class="header__center-link link-reset">
-                  События
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#publications" class="header__center-link link-reset">
-                  Издания
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#projects" class="header__center-link link-reset">
-                  Проекты
-                </a>
-              </li>
-              <li class="header__list-item">
-                <a href="#contacts" class="header__center-link link-reset">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
-            
+          <div class="header__burger-menu" id="burger-menu">
+            <button id="burger__close" class="header__burger-close">
+              <svg aria-label="Закрытие бургера" class="header__burger__close-btn" id="burger__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
+              </svg>  
+            </button>
+            <nav aria-label="Навигация" class="header__burger-nav header__nav">
+              <ul aria-label="Список навигаций" class="header__list flex">
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#about-us" class="header__center-link header__burger-link link-reset">
+                    О нас
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#gallery" class="header__center-link header__burger-link link-reset">
+                    Галерея
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#catalog" class="header__center-link header__burger-link link-reset">
+                    Каталог
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#events" class="header__center-link header__burger-link link-reset">
+                    События
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#publications" class="header__center-link header__burger-link link-reset">
+                    Издания
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#projects" class="header__center-link header__burger-link link-reset">
+                    Проекты
+                  </a>
+                </li>
+                <li class="header__list-item header__burger-list-item">
+                  <a href="#contacts" class="header__center-link header__burger-link link-reset">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a aria-label="Вход в аккаунт" class="header__in-btn link-reset">
+              <svg class="header__in-btn-svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
+              </svg>
+              Войти
+            </a>
+              
+          </div>
         </div>
 
-        <div class="header__right">
-          <a href="#" aria-label="Вход в аккаунт" class="link-reset header__right-link">
-            <svg class="header__right-svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
-            </svg>  
-            Войти                      
-          </a>
+          <div class="header__right">
+            <a href="#" aria-label="Вход в аккаунт" class="link-reset header__right-link">
+              <svg class="header__right-svg" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z" fill="white"/>
+              </svg>  
+              Войти                      
+            </a>
           <button aria-label="Поиск по сайту" class="header__search-btn" id="search">
             <svg class="header__search-btn-svg" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
@@ -383,7 +343,7 @@
   </header>
   <main id="main" class="main">
     <section class="hero" id="hero">
-      <h1 aria-hidden="true" class="hidden">Галерея</h1>
+      <h1 class="hidden">Галерея</h1>
       <div class="hero__container swiper-container">
         <div id="hero__swiper" class="swiper hero__new-swiper">
           <div class="swiper-wrapper hero__swiper-wrapper">
@@ -568,7 +528,7 @@
               Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
           </p>
           <div class="flex catalog__accordion-content">
-            <div id="catalog__left-painter" class="catalog__content-left">
+            <div id="painter-descr" class="catalog__content-left">
               <div data-target="painter-1" class="catalog__left-painter">
                 <img src="img/beneddito.jpeg" aria-label="Изображение художника" class="catalog__tab-img" alt="Изоображение Бенедетто ди Биндо">
                 <div class="catalog__left-painter-text">
@@ -921,122 +881,122 @@
                   <div class="catalog__accordion-bottom">
                     <ul class="catalog__people-list">
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-1" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-1" class="catalog__painter-name link-reset">
                           Бенедетто ди Биндо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-2" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-2" class="catalog__painter-name link-reset">
                           Бергоньоне, Амброджо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-3" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-3" class="catalog__painter-name link-reset">
                           Биссоло, Франческо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-4" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-4" class="catalog__painter-name link-reset">
                           Больтраффио, Джованни
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-5" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-5" class="catalog__painter-name link-reset">
                           Бонсиньори, Франческо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-6" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-6" class="catalog__painter-name link-reset">
                           Боттичини, Рафаэлло
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-7" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-7" class="catalog__painter-name link-reset">
                           Брамантино
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-8" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-8" class="catalog__painter-name link-reset">
                           Бреа, Людовико
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-9" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-9" class="catalog__painter-name link-reset">
                           Бьяджо д’Антонио Туччи
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-10" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-10" class="catalog__painter-name link-reset">
                           Веккьетта
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-11" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-11" class="catalog__painter-name link-reset">
                           Андреа Верроккьо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-12" class="catalog__painter-name-active catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-12" class="catalog__painter-name-active catalog__painter-name link-reset">
                           Доменико Гирландайо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-13" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-13" class="catalog__painter-name link-reset">
                           Беноццо Гоццоли
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-14" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-14" class="catalog__painter-name link-reset">
                           Граначчи, Франческо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-15" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-15" class="catalog__painter-name link-reset">
                           Грегорио ди Чекко
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-16" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-16" class="catalog__painter-name link-reset">
                           Джованни да Удине
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-17" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-17" class="catalog__painter-name link-reset">
                           Джованни ди Паоло
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-18" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-18" class="catalog__painter-name link-reset">
                           Джорджоне
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-19" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-19" class="catalog__painter-name link-reset">
                           Парентино, Бернардо
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-20" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-20" class="catalog__painter-name link-reset">
                           Пезеллино
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-21" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-21" class="catalog__painter-name link-reset">
                           Пьетро Перуджино
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-22" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-22" class="catalog__painter-name link-reset">
                           Перуцци, Бальдассаре
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a href="#catalog__left-painter" aria-label="Имя художника" data-path="painter-23" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-23" class="catalog__painter-name link-reset">
                           Пизанелло
                         </a>
                       </li>
                       <li class="catalog__accordion-people">
-                        <a data-path="painter-24" class="catalog__painter-name link-reset">
+                        <a href="#painter-descr" aria-label="Имя художника" data-path="painter-24" class="catalog__painter-name link-reset">
                           Пинтуриккьо
                         </a>
                       </li>
@@ -1232,7 +1192,7 @@
                 <div class="events__swiper-wrapper swiper-wrapper">
                     <div tabindex="0" class="swiper-slide events__swiper-slide">
                         <div class="events__swiper-slide-content">
-                            <picture>
+                            <picture class="events__swiper-slide-picture">
                                 <source srcset="img/events-1.jpg" media="(max-width: 1920px)">
                                 <source srcset="img/events-1-1024.jpg" media="(max-width: 1024px)">
                                 <source srcset="img/events-1-768.jpg" media="(max-width: 768px)">
@@ -1260,7 +1220,7 @@
                     </div>
                     <div tabindex="0" class="swiper-slide events__swiper-slide">
                         <div class="events__swiper-slide-content">
-                            <picture>
+                            <picture class="events__swiper-slide-picture">
                                 <source srcset="img/events-2.jpg" media="(max-width: 1920px)">
                                 <source srcset="img/events-2-1024.jpg" media="(max-width: 1024px)">
                                 <source srcset="img/events-2-768.jpg" media="(max-width: 768px)">
@@ -1288,7 +1248,7 @@
                     </div>
                     <div tabindex="0" class="swiper-slide events__swiper-slide">
                         <div class="events__swiper-slide-content">
-                            <picture>
+                            <picture class="events__swiper-slide-picture">
                                 <source srcset="img/events-3.jpg" media="(max-width: 1920px)">
                                 <source srcset="img/events-3-1024.jpg" media="(max-width: 1024px)">
                                 <source srcset="img/events-3-768.jpg" media="(max-width: 768px)">
@@ -1316,7 +1276,7 @@
                     </div>
                     <div tabindex="0" class="swiper-slide events__swiper-slide">
                         <div class="events__swiper-slide-content">
-                            <picture>
+                            <picture class="events__swiper-slide-picture">
                                 <source srcset="img/events-4.jpg" media="(max-width: 1920px)">
                                 <source srcset="img/events-4-1024.jpg" media="(max-width: 1024px)">
                                 <source srcset="img/events-4-768.jpg" media="(max-width: 768px)">
@@ -1344,7 +1304,7 @@
                     </div>
                     <div tabindex="0" class="swiper-slide events__swiper-slide">
                         <div class="events__swiper-slide-content">
-                            <picture>
+                            <picture class="events__swiper-slide-picture">
                                 <source srcset="img/events-5.jpg" media="(max-width: 1920px)">
                                 <source srcset="img/events-5-1024.jpg" media="(max-width: 1024px)">
                                 <source srcset="img/events-5-768.jpg" media="(max-width: 768px)">
@@ -1381,7 +1341,7 @@
                 Проекты
             </h2>
             <p class="projects__descr">
-                Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button aria-label="Подсказка" data-tippy-content="Пример современных тенденций - современная методология разработки" class="tooltip-btn projects__tooltip">i</button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button aria-label="Подсказка" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" class="projects__tooltip tooltip-btn">i </button> исключительно в&nbsp;разрезе&nbsp;маркетинговых и&nbsp;финансовых&nbsp;<button aria-label="Подсказка" data-tippy-content="В стремлении повысить качество" class="projects__tooltip tooltip-btn">i</button> предпосылок. Банальные, но неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными&nbsp;до степени совершенной неузнаваемости. Подробнее: <a href="#" class="to-gallery">blanchard-art.ru/projects</a>
+                Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button aria-label="Подсказка" data-tippy-content="Пример современных тенденций - современная методология разработки" class="tooltip-btn projects__tooltip">i</button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button aria-label="Подсказка" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" class="projects__tooltip tooltip-btn">i </button> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых&nbsp;<button aria-label="Подсказка" data-tippy-content="В стремлении повысить качество" class="projects__tooltip tooltip-btn">i</button> предпосылок. Банальные, но неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными&nbsp;до степени совершенной неузнаваемости. Подробнее: <a href="#" class="to-gallery">blanchard-art.ru/projects</a>
             </p>
             <h3 class="projects__partners-h3">
                 Партнёры проектов:
@@ -1452,7 +1412,7 @@
             <div class="contacts__top-address">
               <address class="contacts__address-address">
                 Шоурум №4
-                <span class="contacts__address-text">Леонтьевский переулок, дом 5/1</span>
+                <span class="contacts__address-text">Леонтьевский&nbsp;переулок,&nbsp;дом&nbsp;5/1</span>
               </address>
             </div>
             <form action="https://postman-echo.com/post" id="contacts__form" class="contacts__form">
