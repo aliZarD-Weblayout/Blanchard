@@ -2828,15 +2828,28 @@ button {
   }
 
   .header__container {
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 29px;
+    padding-bottom: 29px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
   .header__right {
-    padding-top: 6px;
+    margin-right: 0;
+  }
+
+  .header__left {
+    padding-right: 7px;
+  }
+
+  .header__left-logo-link {
+    width: 187px;
+    height: 42px;
+  }
+
+  .header__search-btn {
+    margin-right: 0;
   }
 
   .header__center {
