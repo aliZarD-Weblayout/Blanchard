@@ -252,7 +252,7 @@ const eventsSlider = new Swiper('.events__swiper', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0
+      spaceBetween: 20
     },
   },
   a11y: {
