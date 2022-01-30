@@ -382,17 +382,22 @@ new window.JustValidate("#contacts__form", {
 
 
 //320
-let artTabs = document.querySelectorAll('.catalog__painter-name')
 
-if (document.documentElement.clientWidth <= 992) {
-  artTabs.forEach(function(catalogTab) {
-    catalogTab.addEventListener('click',()=>{
-      let activeCatalog = document.querySelectorAll('#catalog__left-painter');
+const artTabs = document.querySelectorAll('.catalog__painter-name')
 
-      activeCatalog.scrollIntoView({
-        block: "start",
-        behavior: "smooth"
-      });
-    }) ;
-  });
-};
+if (document.documentElement.clientWidth >= 992) {
+  for (let artTab of artTabs) {
+    artTabs.forEach(function(catalogTab) {
+      catalogTab.addEventListener('click', function(e) {
+        e.preventDefault();
+        const artInf = artTabs.getAttribute('href');
+        const activeCatalog = document.querySelectorAll('#painter-descr');
+  
+        activeCatalog.scrollIntoView({
+          block: "start",
+          behavior: "smooth"
+        });
+      }) ;
+    });
+  ;}
+}
