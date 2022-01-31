@@ -2109,6 +2109,7 @@ button {
   max-width: 497px;
   padding-top: 3.3%;
   padding-left: 9.5%;
+  margin-top: -4px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2125,6 +2126,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #cacaca;
+  border-top: 0;
 }
 
 .events__swiper-slide-text-content {
@@ -3199,10 +3201,6 @@ button {
     height: 100%;
   }
 
-  .events__swiper-slide-text {
-    border-top: 0;
-  }
-  
   .events__swiper-slide-picture {
     min-height: 29.6%;
     height: auto;
@@ -3237,6 +3235,10 @@ button {
         -ms-flex-pack: end;
             justify-content: flex-end;
     text-align: right;
+  }
+
+  .events__swiper-slide-text {
+    margin-top: 0;
   }
 
   .events__swiper-slide-name-time {
