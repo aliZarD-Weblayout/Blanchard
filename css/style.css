@@ -1442,6 +1442,7 @@ button {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px); 
   z-index: 100;
+  opacity: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1450,7 +1451,6 @@ button {
           align-items: center;
   overflow: hidden;
   visibility: hidden;
-  opacity: 0;
   -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
   transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
@@ -1515,6 +1515,7 @@ button {
   display: flex;
   height: 100vh;
   opacity: 1;
+  justify-content: center;
   pointer-events: auto;
   visibility: visible;
 }
@@ -3316,10 +3317,20 @@ button {
 
   .header__search-btn {
     position: static;
+    margin-right: 10px;
   }
 
   .header__container {
     position: relative;
+  }
+
+  .header__bottom-form {
+    width: 100%;
+  }
+
+  #search-menu {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .header__right {
@@ -3411,7 +3422,8 @@ button {
     padding-bottom: 82px;
   }
   .choices__list--dropdown {
-    background-color: #000;
+    margin-left: -1px;
+    background: rgba(0, 0, 0, 0.8);
   }
 
 
@@ -3830,13 +3842,6 @@ button {
 
   .gallery__h2-select {
     margin-bottom: 31px;
-  }
-
-  .choices__list--dropdown {
-    background: rgba(0, 0, 0, 0.8);
-    left: -1px;
-    right: -1px;
-    top: 103.4%;
   }
 
   .choices[data-type*=select-one] .choices__inner {
